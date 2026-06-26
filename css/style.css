@@ -10,11 +10,42 @@
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background: #f5f5f5;
     color: #333;
     line-height: 1.6;
 
-    padding-top: 100px; /* space for fixed header */
+    margin: 0;
+    padding-top: 100px;
+
+    background: #f5f5f5;
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* FULL PAGE BACKGROUND */
+body::before {
+    content: "";
+
+    position: fixed;
+    inset: 0;
+
+    background: url("../images/Salustania.png") center center no-repeat;
+    background-size: cover;      /* Covers the entire page */
+
+    opacity: 0.5;                /* 50% opacity */
+
+    z-index: -1;
+    pointer-events: none;
+}
+/* MOBILE */
+@media (max-width: 768px) {
+
+    body::before {
+        width: 100%;
+        background-position: center bottom;
+        background-size: 70%;
+        opacity: 0.08;
+    }
+
 }
 
 /* ========================================
@@ -147,7 +178,7 @@ nav a:hover::after {
 .section p {
     font-size: 17px;
     line-height: 1.9;
-    color: #555;
+    color: #222; 
     text-align: justify;
     margin-bottom: 20px;
 }
@@ -184,7 +215,7 @@ nav a:hover::after {
 
 .info-box p {
     margin: 0;
-    color: #666;
+     color: #222; 
 }
 
 /* ========================================
