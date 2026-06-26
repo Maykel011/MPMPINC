@@ -20,7 +20,7 @@
         <a href="services.php">Services</a>
         <a href="client.php">Clients</a>
         <a href="careers.php">Careers</a>
-        <a href="contactus.php">Contact Us</a>
+        <a href="contact.php">Contact Us</a>
     </nav>
 </header>
 
