@@ -117,18 +117,19 @@
 
         </div>
 
-        <div class="map-box">
+<div class="map-box">
 
-            <iframe
-                src="https://www.google.com/maps?q=4/F%20Salustiana%20D.%20Ty%20Tower,%20104%20Paseo%20De%20Roxas%20corner%20Perea%20Street,%20Legaspi%20Village,%20Makati%20City&output=embed"
-                width="100%"
-                height="350"
-                style="border:0;"
-                allowfullscreen=""
-                loading="lazy">
-            </iframe>
+    <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3861.7757950073515!2d121.01771157510521!3d14.554809985926113!2m3!1f0!2f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397c9004f804d1d%3A0x5be6de337283ccac!2sAIA%20Tower!5e0!3m2!1sen!2sph!4v1782442964894!5m2!1sen!2sph"
+        width="100%"
+        height="100%"
+        style="border:0;"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="strict-origin-when-cross-origin">
+    </iframe>
 
-        </div>
+</div>
 
     </div>
 
