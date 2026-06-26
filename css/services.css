@@ -1,0 +1,294 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
+
+    padding-top: 100px;
+}
+
+/* HEADER */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+
+    height: 90px;
+
+    background: linear-gradient(to bottom, #79C679, #43B143);
+
+    padding: 0 50px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    box-shadow: 0 2px 15px rgba(0,0,0,0.15);
+}
+
+.logo img {
+    height: 70px;
+}
+
+nav {
+    display: flex;
+    gap: 25px;
+    align-items: center;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 15px;
+
+    position: relative;
+}
+
+nav a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 0;
+    height: 2px;
+    background: #fff;
+    transition: 0.3s;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+/* HERO */
+.hero {
+    background: linear-gradient(to bottom, #79C679, #43B143);
+    color: white;
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.hero h1 {
+    font-size: 42px;
+}
+
+.hero p {
+    font-size: 18px;
+}
+
+/* SECTION */
+.section {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 50px;
+
+    background: #fff;
+    border-radius: 15px;
+
+    box-shadow: 0 5px 25px rgba(0,0,0,0.08);
+
+    border-top: 6px solid #43B143;
+}
+
+.section h2 {
+    font-size: 34px;
+    color: #2f8f2f;
+    margin-bottom: 25px;
+
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.section h2::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+    width: 80px;
+    height: 4px;
+
+    background: linear-gradient(to right, #43B143, #79C679);
+}
+
+/* TEXT */
+.section p {
+    font-size: 17px;
+    line-height: 1.9;
+    color: #555;
+    text-align: justify;
+    margin-bottom: 20px;
+}
+
+/* AWARDS BOX */
+.mission-vision {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.info-box {
+    background: #f8fff8;
+    border-left: 5px solid #43B143;
+
+    padding: 30px;
+    border-radius: 10px;
+
+    transition: 0.3s;
+}
+
+.info-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(67, 177, 67, 0.15);
+}
+
+.info-box h3 {
+    color: #2f8f2f;
+    margin-bottom: 10px;
+}
+
+/* FOOTER */
+footer {
+    background: #2f8f2f;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+
+    header {
+        flex-direction: column;
+        height: auto;
+        padding: 15px 20px;
+        gap: 10px;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .section {
+        margin: 20px;
+        padding: 25px;
+    }
+
+    .hero h1 {
+        font-size: 30px;
+    }
+}
+
+/* ========================================
+   ISO TITLE + IMAGE ALIGNMENT
+   ======================================== */
+
+.iso-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 30px;
+}
+
+/* title */
+.iso-header h2 {
+    margin: 0;
+    font-size: 34px;
+    color: #2f8f2f;
+}
+
+/* small image beside title */
+.iso-title-img {
+    height: 85px;   /* 👈 increased from 60px */
+    width: auto;
+
+    border-radius: 8px;
+    border: 2px solid #43B143;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+       cursor: pointer;
+    transition: 0.3s ease;
+}
+
+
+
+.iso-title-img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+/* responsive */
+@media (max-width: 768px) {
+
+    .iso-header {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+
+    .iso-title-img {
+        height: 80px;
+    }
+}
+
+
+
+/* AWARDS GALLERY */
+.awards-gallery {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin: 30px 0;
+}
+
+/* BORDER BOX */
+.award-box {
+    width: 150px;
+    height: 150px;
+
+    background: #fff;
+    border: 3px solid #43B143;
+    border-radius: 12px;
+
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    overflow: hidden;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.award-box:hover {
+    transform: scale(1.03);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+/* IMAGE ONLY */
+.award-img {
+    width: 90%;
+    height: 90%;
+
+    object-fit: contain;
+
+    transform: translateY(10px); /* move image down */
+
+    transition: 0.3s ease;
+}
+
