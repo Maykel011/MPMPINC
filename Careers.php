@@ -40,24 +40,35 @@
 <!-- APPLICATION PROCEDURE -->
 <section class="section">
 
-    <h2>Application Procedure</h2>
+    <div class="application-header">
+
+        <h2>Application Procedure</h2>
+
+        <a href="https://ph.indeed.com/cmp/Metro-Parking-Management-(phils)-Inc.-1"
+           target="_blank">
+
+            <img src="images/indeed.png"
+                 alt="Apply on Indeed"
+                 class="application-title-img">
+
+        </a>
+
+    </div>
 
     <div class="career-info">
 
         <div class="info-box">
             <h3>Walk-In</h3>
             <p>
-                4/F Salustiana D. Ty Tower
-                104 Paseo De Roxas corner Perea St.
+                4/F Salustiana D. Ty Tower<br>
+                104 Paseo De Roxas corner Perea St.<br>
                 Legaspi Village, Makati City
             </p>
         </div>
 
         <div class="info-box">
             <h3>Email</h3>
-            <p>
-                humanresource@metro-parking.com.ph
-            </p>
+            <p>humanresource@metro-parking.com.ph</p>
         </div>
 
         <div class="info-box">

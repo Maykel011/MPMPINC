@@ -266,3 +266,47 @@ footer {
     color: #555;
     text-align: left;
 }
+
+
+/* ===========================
+   APPLICATION HEADER
+=========================== */
+
+.application-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.application-header h2 {
+    margin: 0;
+}
+
+.application-title-img {
+    width: 180px;      /* Adjust as needed */
+    height: auto;
+
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.application-title-img:hover {
+    transform: scale(1.05);
+}
+
+/* Responsive */
+
+@media (max-width: 768px) {
+
+    .application-header {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    .application-title-img {
+        width: 140px;
+    }
+
+}

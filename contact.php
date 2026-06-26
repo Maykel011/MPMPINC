@@ -7,6 +7,7 @@
     <title>Contact Us - MPMPI</title>
 
     <link rel="stylesheet" href="css/contact.css">
+    
 </head>
 <body>
 
@@ -45,12 +46,6 @@
 <section class="section">
 
     <h2>Contact Information</h2>
-
-    <p>
-        If you require adept information regarding the business partnership we offer,
-        you may call the numbers provided below. Rest assured that our personnel
-        shall assist you with your queries.
-    </p>
 
     <div class="contact-grid">
 
