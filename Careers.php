@@ -47,8 +47,8 @@
         <div class="info-box">
             <h3>Walk-In</h3>
             <p>
-                4/F Salustiana D. Ty Tower<br>
-                104 Paseo De Roxas corner Perea St.<br>
+                4/F Salustiana D. Ty Tower
+                104 Paseo De Roxas corner Perea St.
                 Legaspi Village, Makati City
             </p>
         </div>
@@ -96,7 +96,7 @@
             <li>Must be at least 19 to 55 years old</li>
             <li>At least High School Graduate</li>
             <li>Good written and oral communication skills</li>
-            <li>Must possess a Professional Driver's License</li>
+            <li>Must have a Professional Driver's License</li>
         </ul>
     </div>
 
