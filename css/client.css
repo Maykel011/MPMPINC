@@ -1,0 +1,391 @@
+/* RESET */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+/* BODY */
+
+body{
+
+    font-family:Arial,Helvetica,sans-serif;
+    background:#f5f5f5;
+    color:#333;
+
+    line-height:1.6;
+
+    padding-top:100px;
+
+    overflow-x:hidden;
+
+    position:relative;
+
+}
+
+body::before{
+
+    content:"";
+
+    position:fixed;
+    inset:0;
+
+    background:url("../images/Salustania.png") center center no-repeat;
+    background-size:cover;
+
+    opacity:.5;
+
+    z-index:-1;
+
+}
+
+/* HEADER */
+
+header{
+
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    width:100%;
+
+    height:90px;
+
+    background:linear-gradient(to bottom,#79C679,#43B143);
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:0 50px;
+
+    box-shadow:0 3px 15px rgba(0,0,0,.15);
+
+    z-index:999;
+
+}
+
+.logo img{
+
+    height:70px;
+
+}
+
+nav{
+
+    display:flex;
+
+    gap:25px;
+
+}
+
+nav a{
+
+    color:#fff;
+
+    text-decoration:none;
+
+    font-weight:600;
+
+    position:relative;
+
+}
+
+nav a::after{
+
+    content:"";
+
+    position:absolute;
+
+    bottom:-4px;
+    left:0;
+
+    width:0;
+
+    height:2px;
+
+    background:#fff;
+
+    transition:.3s;
+
+}
+
+nav a:hover::after,
+nav a.active::after{
+
+    width:100%;
+
+}
+
+/* SECTION */
+
+.section{
+
+    max-width:1300px;
+
+    margin:50px auto;
+
+    background:#fff;
+
+    padding:50px;
+
+    border-radius:18px;
+
+    border-top:6px solid #43B143;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+
+}
+
+.section h2{
+
+    font-size:34px;
+
+    color:#2f8f2f;
+
+    margin-bottom:25px;
+
+    position:relative;
+
+}
+
+.section h2::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    bottom:-10px;
+
+    width:90px;
+
+    height:4px;
+
+    background:#43B143;
+
+}
+
+.section p{
+
+    font-size:17px;
+
+    text-align:justify;
+
+    color:#444;
+
+}
+
+/* CLIENT GRID */
+
+.client-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+
+    gap:30px;
+
+    margin-top:40px;
+
+}
+
+/* CLIENT CARD */
+
+.client-card{
+
+    background:#fff;
+
+    border:3px solid #43B143;
+
+    border-radius:20px;
+
+    height:200px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:30px;
+
+    position:relative;
+
+    overflow:hidden;
+
+    transition:.35s;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+
+}
+
+/* DOUBLE BORDER */
+
+.client-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:10px;
+
+    border:2px dashed #79C679;
+
+    border-radius:14px;
+
+    pointer-events:none;
+
+}
+
+/* SHINE */
+
+.client-card::after{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:-150%;
+
+    width:70%;
+
+    height:100%;
+
+    background:linear-gradient(
+        120deg,
+        transparent,
+        rgba(255,255,255,.8),
+        transparent
+    );
+
+    transition:.8s;
+
+}
+
+.client-card:hover::after{
+
+    left:150%;
+
+}
+
+.client-card:hover{
+
+    transform:translateY(-10px);
+
+    border-color:#2f8f2f;
+
+    box-shadow:0 18px 35px rgba(67,177,67,.28);
+
+}
+
+.client-card img{
+
+    max-width:100%;
+
+    max-height:90px;
+
+    object-fit:contain;
+
+    filter:grayscale(100%);
+
+    transition:.35s;
+
+}
+
+.client-card:hover img{
+
+    filter:grayscale(0);
+
+    transform:scale(1.08);
+
+}
+
+/* FOOTER */
+
+footer{
+
+    background:#2f8f2f;
+
+    color:#fff;
+
+    text-align:center;
+
+    padding:20px;
+
+    margin-top:50px;
+
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+header{
+
+    flex-direction:column;
+
+    height:auto;
+
+    padding:15px;
+
+}
+
+nav{
+
+    flex-wrap:wrap;
+
+    justify-content:center;
+
+    gap:15px;
+
+}
+
+.section{
+
+    margin:20px;
+
+    padding:30px;
+
+}
+
+.client-grid{
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:20px;
+
+}
+
+.client-card{
+
+    height:160px;
+
+    padding:20px;
+
+}
+
+.client-card img{
+
+    max-height:70px;
+
+}
+
+}
+
+@media(max-width:480px){
+
+.client-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+}
