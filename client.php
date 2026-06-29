@@ -35,9 +35,8 @@
     <p>
         Metro Parking Management (Phils.) Inc. is proud to have partnered with
         numerous commercial establishments, residential developments, hospitals,
-        hotels, office buildings, educational institutions, and mixed-use
-        developments across the Philippines. Our commitment to professional
-        parking management has earned the trust of our valued clients.
+        hotels, office buildings, and mixed-use developments across the Philippines. 
+        Our commitment to professional parking management has earned the trust of our valued clients.
     </p>
 
 </section>
