@@ -279,15 +279,24 @@ nav a.active::after{
 
     display:block;
 
-    width:90%;
+    position:absolute;
 
-    height:90%;
+    top:50%;
+    left:50%;
+
+    transform:translate(-50%, -50%);
+
+    max-width:90%;
+
+    max-height:90%;
+
+    width:auto;
+
+    height:auto;
 
     object-fit:contain;
 
     object-position:center;
-
-    margin:auto;
 
     transition:transform .35s ease;
 
@@ -295,9 +304,10 @@ nav a.active::after{
 
 .client-card:hover img{
 
-    transform:scale(1.12);
+    transform:translate(-50%, -50%) scale(1.12);
 
 }
+
 
 /* FOOTER */
 
