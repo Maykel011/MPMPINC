@@ -144,7 +144,6 @@
 </div>
 </section>
 
-<!-- FOOTER -->
 <footer>
     &copy; <?php echo date('1998'); ?> MPMPI. All Rights Reserved.
 </footer>
