@@ -34,7 +34,7 @@
 
     <p>
         Metro Parking Management (Phils.) Inc. is proud to have partnered with
-        numerous commercial establishments, residential developments, hospitals,
+        numerous commercial establishments, residential developments,
         hotels, office buildings, and mixed-use developments across the Philippines. 
         Our commitment to professional parking management has earned the trust of our valued clients.
     </p>
@@ -59,18 +59,16 @@
 
         <div class="client-card"><img src="images/clients/eton.png" alt="Client 8"></div>
         <div class="client-card"><img src="images/clients/ICTSI.png" alt="Client 9"></div>
-        <div class="client-card"><img src="images/clients/nkti.png" alt="Client 10"></div>
+        <div class="client-card"><img src="images/clients/eco.png" alt="Client 10"></div>
         <div class="client-card"><img src="images/clients/jnhs.png" alt="Client 11"></div>
         <div class="client-card"><img src="images/clients/seascape.png" alt="Client 12"></div>
-        <div class="client-card"><img src="images/clients/client13.png" alt="Client 13"></div>
-        <div class="client-card"><img src="images/clients/client14.png" alt="Client 14"></div>
+        <div class="client-card"><img src="images/clients/streetscape.png" alt="Client 13"></div>
+        <div class="client-card"><img src="images/clients/mbp1.png" alt="Client 14"></div>
 
-        <div class="client-card"><img src="images/clients/client15.png" alt="Client 15"></div>
-        <div class="client-card"><img src="images/clients/client16.png" alt="Client 16"></div>
-        <div class="client-card"><img src="images/clients/client17.png" alt="Client 17"></div>
-        <div class="client-card"><img src="images/clients/client18.png" alt="Client 18"></div>
-        <div class="client-card"><img src="images/clients/client19.png" alt="Client 19"></div>
-        <div class="client-card"><img src="images/clients/client20.png" alt="Client 20"></div>
+        <div class="client-card"><img src="images/clients/pbcom.png" alt="Client 15"></div>
+        <div class="client-card"><img src="images/clients/regiscenter.png" alt="Client 16"></div>
+        <div class="client-card"><img src="images/clients/jpmorgan.png" alt="Client 17"></div>
+        <div class="client-card"><img src="images/clients/TM.png" alt="Client 18"></div>
 
     </div>
 
