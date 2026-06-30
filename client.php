@@ -77,7 +77,6 @@
 
 </section>
 
-<!-- FOOTER -->
 
 <footer>
 
