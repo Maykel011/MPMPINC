@@ -49,13 +49,13 @@
 
     <div class="client-grid">
 
-        <div class="client-card"><img src="images/clients/client1.png" alt="Client 1"></div>
-        <div class="client-card"><img src="images/clients/client2.png" alt="Client 2"></div>
-        <div class="client-card"><img src="images/clients/client3.png" alt="Client 3"></div>
-        <div class="client-card"><img src="images/clients/client4.png" alt="Client 4"></div>
-        <div class="client-card"><img src="images/clients/client5.png" alt="Client 5"></div>
-        <div class="client-card"><img src="images/clients/client6.png" alt="Client 6"></div>
-        <div class="client-card"><img src="images/clients/client7.png" alt="Client 7"></div>
+        <div class="client-card"><img src="images/clients/homedepot.png" alt="Client 1"></div>
+        <div class="client-card"><img src="images/clients/robinsonland.png" alt="Client 2"></div>
+        <div class="client-card"><img src="images/clients/banilad.png" alt="Client 3"></div>
+        <div class="client-card"><img src="images/clients/South Supermarket.png" alt="Client 4"></div>
+        <div class="client-card"><img src="images/clients/federalland.png" alt="Client 5"></div>
+        <div class="client-card"><img src="images/clients/peninsula.png" alt="Client 6"></div>
+        <div class="client-card"><img src="images/clients/shangri.png" alt="Client 7"></div>
 
         <div class="client-card"><img src="images/clients/client8.png" alt="Client 8"></div>
         <div class="client-card"><img src="images/clients/client9.png" alt="Client 9"></div>
@@ -71,7 +71,6 @@
         <div class="client-card"><img src="images/clients/client18.png" alt="Client 18"></div>
         <div class="client-card"><img src="images/clients/client19.png" alt="Client 19"></div>
         <div class="client-card"><img src="images/clients/client20.png" alt="Client 20"></div>
-        <div class="client-card"><img src="images/clients/client21.png" alt="Client 21"></div>
 
     </div>
 
