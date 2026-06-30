@@ -78,7 +78,5 @@ $company = $stmt->fetch(PDO::FETCH_ASSOC);
     &copy; <?php echo date('1998'); ?> MPMPI. All Rights Reserved.
 </footer>
 
-
-
 </body>
 </html>
