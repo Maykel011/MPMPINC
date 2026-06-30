@@ -57,10 +57,10 @@
         <div class="client-card"><img src="images/clients/peninsula.png" alt="Client 6"></div>
         <div class="client-card"><img src="images/clients/shangri.png" alt="Client 7"></div>
 
-        <div class="client-card"><img src="images/clients/client8.png" alt="Client 8"></div>
-        <div class="client-card"><img src="images/clients/client9.png" alt="Client 9"></div>
-        <div class="client-card"><img src="images/clients/client10.png" alt="Client 10"></div>
-        <div class="client-card"><img src="images/clients/client11.png" alt="Client 11"></div>
+        <div class="client-card"><img src="images/clients/eton.png" alt="Client 8"></div>
+        <div class="client-card"><img src="images/clients/ICTSI.png" alt="Client 9"></div>
+        <div class="client-card"><img src="images/clients/nkti.png" alt="Client 10"></div>
+        <div class="client-card"><img src="images/clients/jnhs.png" alt="Client 11"></div>
         <div class="client-card"><img src="images/clients/client12.png" alt="Client 12"></div>
         <div class="client-card"><img src="images/clients/client13.png" alt="Client 13"></div>
         <div class="client-card"><img src="images/clients/client14.png" alt="Client 14"></div>
