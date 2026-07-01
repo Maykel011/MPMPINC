@@ -1,10 +1,3 @@
-<?php
-require_once 'config/database.php';
-
-$stmt = $pdo->query("SELECT company_name, about_us FROM company_profile LIMIT 1");
-$company = $stmt->fetch(PDO::FETCH_ASSOC);
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -53,23 +46,32 @@ $company = $stmt->fetch(PDO::FETCH_ASSOC);
         Malaysia and Singapore within two years of operation and is now an established leader in both countries.
     </p>
 
-    <div class="mission-vision">
-        <div class="info-box">
-            <h3>Mission</h3>
-            <p>
-                To be the first choice in parking by providing the <b>best</b> possible experience
-                each time through staff who are highly <b>motivated</b>, <b>empowered</b>, and <b>dedicated</b>
-                to increasing employees' and shareholders' value.
-            </p>
-        </div>
+<div class="mission-vision">
 
-        <div class="info-box">
-            <h3>Vision</h3>
-            <p>
-                To be the best Car Park Operator in the Philippines and to <b>lead</b> in this industry.
-            </p>
-        </div>
-    </div>
+    <article class="info-box">
+        <h3>Mission</h3>
+
+        <p>
+            To be the first choice in parking by providing the
+            <strong>best</strong> possible experience each time
+            through staff who are highly
+            <strong>motivated</strong>,
+            <strong>empowered</strong>, and
+            <strong>dedicated</strong> to increasing employees'
+            and shareholders' value.
+        </p>
+    </article>
+
+    <article class="info-box">
+        <h3>Vision</h3>
+
+        <p>
+            To be the best Car Park Operator in the Philippines
+            and to <strong>lead</strong> in this industry.
+        </p>
+    </article>
+
+</div>
 </section>
 </main>
  
