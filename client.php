@@ -26,6 +26,21 @@
 
 </header>
 
+<!-- CLIENT CATEGORY BAR -->
+
+<div class="category-bar">
+
+    <div class="category-container">
+
+        <a href="#office">🏢 Office</a>
+        <a href="#hotel">🏨 Hotel</a>
+        <a href="#opensite">🚗 Open Site</a>
+        <a href="#province">📍 Province</a>
+
+    </div>
+
+</div>
+
 <!-- INTRO -->
 
 <section class="section">
@@ -35,44 +50,94 @@
     <p>
         Metro Parking Management (Phils.) Inc. is proud to have partnered with
         numerous commercial establishments, residential developments,
-        hotels, office buildings, and mixed-use developments across the Philippines. 
+        hotels, office buildings, and mixed-use developments across the Philippines.
         Our commitment to professional parking management has earned the trust of our valued clients.
     </p>
 
 </section>
 
-<!-- CLIENTS -->
 
-<section class="section">
+    <!-- CONTENT -->
 
-    <h2>Trusted By</h2>
+    <div class="client-content">
 
-    <div class="client-grid">
+        <section class="section">
 
-        <div class="client-card"><img src="images/clients/homedepot.png" alt="Client 1"></div>
-        <div class="client-card"><img src="images/clients/robinsonland.png" alt="Client 2"></div>
-        <div class="client-card"><img src="images/clients/banilad.png" alt="Client 3"></div>
-        <div class="client-card"><img src="images/clients/South Supermarket.png" alt="Client 4"></div>
-        <div class="client-card"><img src="images/clients/federalland.png" alt="Client 5"></div>
-        <div class="client-card"><img src="images/clients/peninsula.png" alt="Client 6"></div>
-        <div class="client-card"><img src="images/clients/shangri.png" alt="Client 7"></div>
+            <h2>Trusted By</h2>
 
-        <div class="client-card"><img src="images/clients/eton.png" alt="Client 8"></div>
-        <div class="client-card"><img src="images/clients/ICTSI.png" alt="Client 9"></div>
-        <div class="client-card"><img src="images/clients/eco.png" alt="Client 10"></div>
-        <div class="client-card"><img src="images/clients/jnhs.png" alt="Client 11"></div>
-        <div class="client-card"><img src="images/clients/seascape.png" alt="Client 12"></div>
-        <div class="client-card"><img src="images/clients/streetscape.png" alt="Client 13"></div>
-        <div class="client-card"><img src="images/clients/mbp1.png" alt="Client 14"></div>
+            <!-- OFFICE -->
 
-        <div class="client-card"><img src="images/clients/pbcom.png" alt="Client 15"></div>
-        <div class="client-card"><img src="images/clients/regiscenter.png" alt="Client 16"></div>
-        <div class="client-card"><img src="images/clients/jpmorgan.png" alt="Client 17"></div>
-        <div class="client-card"><img src="images/clients/TM.png" alt="Client 18"></div>
+            <div class="client-category" id="office">
 
-    </div>
+                <h3>Office</h3>
 
-</section>
+                <div class="client-grid office-grid">
+
+                    <div class="client-card"><img src="images/clients/eton.png" alt=""></div>
+                    <div class="client-card"><img src="images/clients/federalland.png" alt=""></div>
+                    <div class="client-card"><img src="images/clients/peninsula.png" alt=""></div>
+                    <div class="client-card"><img src="images/clients/eco.png" alt=""></div>
+
+                </div>
+
+            </div>
+
+            <!-- HOTEL -->
+
+            <div class="client-category" id="hotel">
+
+                <h3>Hotel</h3>
+
+                <div class="client-grid hotel-grid">
+
+                    <div class="client-card"><img src="images/clients/peninsula.png" alt=""></div>
+                    <div class="client-card"><img src="images/clients/shangri.png" alt=""></div>
+                    <div class="client-card"><img src="images/clients/jnhs.png" alt=""></div>
+
+                </div>
+
+            </div>
+
+            <!-- OPEN SITE -->
+
+            <div class="client-category" id="opensite">
+
+                <h3>Open Site</h3>
+
+                <div class="client-grid opensite-grid">
+
+                    <div class="client-card"><img src="images/clients/seascape.png" alt=""></div>
+                    <div class="client-card"><img src="images/clients/homedepot.png" alt=""></div>
+                    <div class="client-card"><img src="images/clients/robinsonland.png" alt=""></div>
+                    <div class="client-card"><img src="images/clients/South Supermarket.png" alt=""></div>
+                    <div class="client-card"><img src="images/clients/federalland.png" alt=""></div>
+                    <div class="client-card"><img src="images/clients/eton.png" alt=""></div>
+                    <div class="client-card"><img src="images/clients/ICTSI.png" alt=""></div>
+                    <div class="client-card"><img src="images/clients/mbp.png" alt=""></div>
+                    <div class="client-card"><img src="images/clients/PBCOM.png" alt=""></div>
+                </div>
+
+            </div>
+
+            <!-- PROVINCE -->
+
+            <div class="client-category" id="province">
+
+                <h3>Province</h3>
+
+                <div class="client-grid province-grid">
+
+                    <div class="client-card"><img src="images/clients/TM.png" alt=""></div>
+                    <div class="client-card"><img src="images/clients/banilad.png" alt=""></div>
+                    <div class="client-card"><img src="images/clients/streetscape.png" alt=""></div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
 
 <footer>
 
