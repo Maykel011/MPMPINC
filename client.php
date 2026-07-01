@@ -17,7 +17,7 @@
     </div>
 
     <nav>
-        <a href="dashboard">Home</a> 
+        <a href="dashboard">About us</a>
         <a href="services">Services</a>
         <a href="client">Clients</a>
         <a href="careers">Careers</a>
@@ -26,20 +26,7 @@
 
 </header>
 
-<!-- CLIENT CATEGORY BAR -->
 
-<div class="category-bar">
-
-    <div class="category-container">
-
-        <a href="#office">🏢 Office</a>
-        <a href="#hotel">🏨 Hotel</a>
-        <a href="#opensite">🚗 Open Site</a>
-        <a href="#province">📍 Province</a>
-
-    </div>
-
-</div>
 
 <!-- INTRO -->
 
@@ -63,13 +50,9 @@
 
         <section class="section">
 
-            <h2>Trusted By</h2>
-
             <!-- OFFICE -->
 
-            <div class="client-category" id="office">
-
-                <h3>Office</h3>
+            <div class="client-category" >
 
                 <div class="client-grid office-grid">
 
@@ -84,9 +67,7 @@
 
             <!-- HOTEL -->
 
-            <div class="client-category" id="hotel">
-
-                <h3>Hotel</h3>
+            <div class="client-category">
 
                 <div class="client-grid hotel-grid">
 
@@ -100,9 +81,7 @@
 
             <!-- OPEN SITE -->
 
-            <div class="client-category" id="opensite">
-
-                <h3>Open Site</h3>
+            <div class="client-category">
 
                 <div class="client-grid opensite-grid">
                     <div class="client-card"><img src="images/clients/cmci-logo.png" alt=""></div>
@@ -123,10 +102,7 @@
 
             <!-- PROVINCE -->
 
-            <div class="client-category" id="province">
-
-                <h3>Province</h3>
-
+            <div class="client-category">
                 <div class="client-grid province-grid">
 
                     <div class="client-card"><img src="images/clients/tm.png" alt=""></div>
