@@ -1,7 +1,6 @@
 <?php
 require_once 'config/database.php';
 
-/* Load Company Information */
 $stmt = $pdo->query("SELECT company_name, about_us FROM company_profile LIMIT 1");
 $company = $stmt->fetch(PDO::FETCH_ASSOC);
 ?>
@@ -18,13 +17,13 @@ $company = $stmt->fetch(PDO::FETCH_ASSOC);
 
 <header>
     <div class="logo">
-        <img src="images/MPMPI LOGO.png" alt="MPMPI Logo">
+        <img src="images/mpmpi.png" alt="MPMPI Logo">
     </div>
 
     <nav>
         <a href="dashboard.php">Home</a>
         <a href="services.php">Services</a>
-        <a href="clients.php">Clients</a>
+        <a href="client.php">Clients</a>
         <a href="careers.php">Careers</a>
         <a href="contact.php">Contact Us</a>
     </nav>

@@ -14,7 +14,7 @@
 <!-- HEADER -->
 <header>
     <div class="logo">
-        <img src="images/MPMPI LOGO.png" alt="MPMPI Logo">
+        <img src="images/mpmpi.png" alt="MPMPI Logo">
     </div>
 
     <nav>

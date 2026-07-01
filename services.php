@@ -13,7 +13,7 @@
 <!-- HEADER -->
 <header>
     <div class="logo">
-        <img src="images/MPMPI LOGO.png" alt="MPMPI Logo">
+        <img src="images/mpmpi.png" alt="MPMPI Logo">
     </div>
 
     <nav>
@@ -57,7 +57,7 @@
     <div class="iso-header">
     <h2>ISO Certification</h2>
 
-    <img src="images/iso-certification.png" 
+    <img src="images/isocertification.png" 
      alt="ISO Certification" 
      class="iso-title-img"
          >

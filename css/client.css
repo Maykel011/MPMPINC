@@ -1,6 +1,6 @@
-/* ==========================================
+/* ==================================================
    RESET
-========================================== */
+================================================== */
 
 *{
     margin:0;
@@ -12,9 +12,9 @@ html{
     scroll-behavior:smooth;
 }
 
-/* ==========================================
+/* ==================================================
    BODY
-========================================== */
+================================================== */
 
 body{
 
@@ -38,18 +38,20 @@ body::before{
     position:fixed;
     inset:0;
 
-    background:url("../images/Salustania.png") center center no-repeat;
+    background:url("../images/salustania.png") center center no-repeat;
     background-size:cover;
 
     opacity:.5;
 
     z-index:-1;
 
+    pointer-events:none;
+
 }
 
-/* ==========================================
+/* ==================================================
    HEADER
-========================================== */
+================================================== */
 
 header{
 
@@ -69,7 +71,7 @@ header{
 
     padding:0 50px;
 
-    box-shadow:0 5px 20px rgba(0,0,0,.15);
+    box-shadow:0 2px 15px rgba(0,0,0,.15);
 
     z-index:1000;
 
@@ -81,29 +83,31 @@ header{
 
 }
 
+/* ==================================================
+   NAVIGATION
+================================================== */
+
 nav{
 
     display:flex;
 
     align-items:center;
 
-    gap:30px;
+    gap:25px;
 
 }
 
 nav a{
 
-    position:relative;
-
     color:#fff;
 
     text-decoration:none;
 
-    font-size:16px;
+    font-size:15px;
 
     font-weight:600;
 
-    transition:.3s;
+    position:relative;
 
 }
 
@@ -114,7 +118,7 @@ nav a::after{
     position:absolute;
 
     left:0;
-    bottom:-6px;
+    bottom:-3px;
 
     width:0;
     height:2px;
@@ -132,20 +136,18 @@ nav a.active::after{
 
 }
 
-/* ==========================================
+/* ==================================================
    CATEGORY BAR
-========================================== */
+================================================== */
 
 .category-bar{
 
     position:fixed;
 
     top:90px;
-
     left:0;
 
     width:100%;
-
     height:55px;
 
     background:#fff;
@@ -160,7 +162,7 @@ nav a.active::after{
 
 .category-container{
 
-    max-width:1400px;
+    max-width:1200px;
 
     height:100%;
 
@@ -172,7 +174,7 @@ nav a.active::after{
 
     align-items:center;
 
-    gap:18px;
+    gap:20px;
 
 }
 
@@ -186,7 +188,7 @@ nav a.active::after{
 
     font-size:15px;
 
-    padding:10px 18px;
+    padding:10px 20px;
 
     border-radius:30px;
 
@@ -202,15 +204,15 @@ nav a.active::after{
 
 }
 
-/* ==========================================
+/* ==================================================
    SECTION
-========================================== */
+================================================== */
 
 .section{
 
-    max-width:1400px;
+    max-width:1200px;
 
-    margin:45px auto;
+    margin:50px auto;
 
     padding:50px;
 
@@ -220,19 +222,21 @@ nav a.active::after{
 
     border-top:6px solid #43B143;
 
-    box-shadow:0 10px 30px rgba(0,0,0,.08);
+    box-shadow:0 5px 25px rgba(0,0,0,.08);
 
 }
 
 .section h2{
 
-    position:relative;
-
-    margin-bottom:25px;
-
     font-size:34px;
 
     color:#2f8f2f;
+
+    margin-bottom:25px;
+
+    position:relative;
+
+    padding-bottom:15px;
 
 }
 
@@ -243,12 +247,12 @@ nav a.active::after{
     position:absolute;
 
     left:0;
-    bottom:-10px;
+    bottom:0;
 
-    width:90px;
+    width:80px;
     height:4px;
 
-    background:#43B143;
+    background:linear-gradient(to right,#43B143,#79C679);
 
 }
 
@@ -256,35 +260,47 @@ nav a.active::after{
 
     font-size:17px;
 
-    color:#444;
+    color:#222;
+
+    line-height:1.9;
 
     text-align:justify;
 
 }
 
-/* ==========================================
+/* ==================================================
    CLIENT CATEGORY
-========================================== */
+================================================== */
 
 .client-category{
 
-    margin-top:60px;
+    margin-top:50px;
 
     padding:35px;
 
     background:#fff;
 
-    border-radius:22px;
+    border-left:6px solid #43B143;
 
-    border-left:7px solid #43B143;
+    border-radius:18px;
 
-    box-shadow:0 10px 25px rgba(0,0,0,.08);
+    box-shadow:0 5px 25px rgba(0,0,0,.08);
 
     position:relative;
 
     overflow:hidden;
 
     scroll-margin-top:170px;
+
+    transition:.3s ease;
+
+}
+
+.client-category:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:0 12px 30px rgba(67,177,67,.15);
 
 }
 
@@ -294,11 +310,11 @@ nav a.active::after{
 
     position:absolute;
 
-    top:-100px;
-    right:-100px;
+    top:-90px;
+    right:-90px;
 
-    width:220px;
-    height:220px;
+    width:180px;
+    height:180px;
 
     border-radius:50%;
 
@@ -308,47 +324,72 @@ nav a.active::after{
 
 }
 
+/* ==================================================
+   CATEGORY TITLE
+================================================== */
+
 .client-category h3{
 
-    display:inline-block;
+    display:inline-flex;
 
-    padding:8px 18px;
+    align-items:center;
+
+    gap:10px;
 
     margin-bottom:30px;
+
+    padding:10px 18px;
+
+    background:#f8fff8;
+
+    border-left:5px solid #43B143;
+
+    border-radius:10px;
 
     font-size:22px;
 
     color:#2f8f2f;
 
-    background:#f7fff7;
-
-    border-left:5px solid #43B143;
-
-    border-radius:8px;
+    font-weight:700;
 
 }
 
-/* ==========================================
+.client-category h3::before{
+
+    content:"";
+
+    width:12px;
+    height:12px;
+
+    background:#43B143;
+
+    border-radius:50%;
+
+}
+
+/* ==================================================
    CLIENT GRID
-========================================== */
+================================================== */
 
 .client-grid{
 
     display:grid;
 
-    grid-template-columns:repeat(5,1fr);
+    grid-template-columns:repeat(4,1fr);
 
     gap:25px;
 
 }
 
-/* ==========================================
+/* ==================================================
    CLIENT CARD
-========================================== */
+================================================== */
 
 .client-card{
 
-    height:220px;
+    position:relative;
+
+    height:200px;
 
     display:flex;
 
@@ -366,17 +407,17 @@ nav a.active::after{
 
     overflow:hidden;
 
+    cursor:pointer;
+
     transition:.35s ease;
 
-    box-shadow:0 8px 20px rgba(0,0,0,.08);
-
-    position:relative;
+    box-shadow:0 6px 18px rgba(0,0,0,.08);
 
 }
 
 .client-card::before{
 
-    content:"";
+   
 
     position:absolute;
 
@@ -397,11 +438,9 @@ nav a.active::after{
     position:absolute;
 
     top:0;
-
-    left:-120%;
+    left:-130%;
 
     width:60%;
-
     height:100%;
 
     background:linear-gradient(
@@ -431,9 +470,9 @@ nav a.active::after{
 
 }
 
-/* ==========================================
+/* ==================================================
    CLIENT LOGO
-========================================== */
+================================================== */
 
 .client-card img{
 
@@ -441,13 +480,13 @@ nav a.active::after{
 
     margin:auto;
 
-    max-width:85%;
-
-    max-height:85%;
-
     width:auto;
 
     height:auto;
+
+    max-width:80%;
+
+    max-height:80%;
 
     object-fit:contain;
 
@@ -463,9 +502,9 @@ nav a.active::after{
 
 }
 
-/* ==========================================
+/* ==================================================
    FOOTER
-========================================== */
+================================================== */
 
 footer{
 
@@ -475,7 +514,7 @@ footer{
 
     text-align:center;
 
-    padding:22px;
+    padding:20px;
 
     margin-top:50px;
 
@@ -483,15 +522,15 @@ footer{
 
 }
 
-/* ==========================================
-   RESPONSIVE
-========================================== */
+/* ==================================================
+   LARGE LAPTOPS
+================================================== */
 
-@media(max-width:1200px){
+@media (max-width:1200px){
 
     .section{
 
-        margin:35px 20px;
+        margin:40px 20px;
 
     }
 
@@ -503,7 +542,11 @@ footer{
 
 }
 
-@media(max-width:992px){
+/* ==================================================
+   TABLETS
+================================================== */
+
+@media (max-width:992px){
 
     body{
 
@@ -517,11 +560,17 @@ footer{
 
         justify-content:center;
 
-        gap:12px;
-
         height:auto;
 
         padding:15px 20px;
+
+        gap:12px;
+
+    }
+
+    .logo img{
+
+        height:60px;
 
     }
 
@@ -549,7 +598,7 @@ footer{
 
         flex-wrap:wrap;
 
-        gap:10px;
+        gap:12px;
 
         padding:0 15px;
 
@@ -557,13 +606,15 @@ footer{
 
     .section{
 
+        margin:25px 20px;
+
         padding:35px;
 
     }
 
     .client-category{
 
-        scroll-margin-top:210px;
+        scroll-margin-top:220px;
 
     }
 
@@ -571,41 +622,7 @@ footer{
 
         grid-template-columns:repeat(3,1fr);
 
-    }
-
-}
-
-@media(max-width:768px){
-
-    .section{
-
-        padding:25px;
-
-    }
-
-    .section h2{
-
-        font-size:28px;
-
-    }
-
-    .client-category{
-
-        padding:25px;
-
-    }
-
-    .client-category h3{
-
-        font-size:20px;
-
-    }
-
-    .client-grid{
-
-        grid-template-columns:repeat(2,1fr);
-
-        gap:18px;
+        gap:20px;
 
     }
 
@@ -617,17 +634,15 @@ footer{
 
 }
 
-@media(max-width:480px){
+/* ==================================================
+   MOBILE
+================================================== */
+
+@media (max-width:768px){
 
     body{
 
-        padding-top:210px;
-
-    }
-
-    .logo img{
-
-        height:55px;
+        padding-top:205px;
 
     }
 
@@ -647,19 +662,107 @@ footer{
 
         justify-content:center;
 
+        gap:10px;
+
     }
 
     .category-container a{
 
-        font-size:13px;
+        font-size:14px;
 
-        padding:8px 14px;
+        padding:8px 15px;
 
     }
 
     .section{
 
         margin:20px 15px;
+
+        padding:25px;
+
+    }
+
+    .section h2{
+
+        font-size:28px;
+
+    }
+
+    .client-category{
+
+        padding:25px;
+
+        scroll-margin-top:235px;
+
+    }
+
+    .client-category h3{
+
+        font-size:20px;
+
+    }
+
+    .client-grid{
+
+        grid-template-columns:repeat(2,1fr);
+
+        gap:18px;
+
+    }
+
+    .client-card{
+
+        height:170px;
+
+    }
+
+}
+
+/* ==================================================
+   SMALL MOBILE
+================================================== */
+
+@media (max-width:480px){
+
+    body{
+
+        padding-top:225px;
+
+    }
+
+    .logo img{
+
+        height:50px;
+
+    }
+
+    nav{
+
+        gap:10px;
+
+    }
+
+    nav a{
+
+        font-size:13px;
+
+    }
+
+    .category-container{
+
+        gap:8px;
+
+    }
+
+    .category-container a{
+
+        font-size:13px;
+
+        padding:7px 12px;
+
+    }
+
+    .section{
 
         padding:20px;
 
@@ -673,13 +776,15 @@ footer{
 
     .client-card{
 
-        height:170px;
+        height:160px;
 
     }
 
-    .client-category{
+    .client-card img{
 
-        scroll-margin-top:230px;
+        max-width:75%;
+
+        max-height:75%;
 
     }
 

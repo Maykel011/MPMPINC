@@ -13,7 +13,7 @@
 <header>
 
     <div class="logo">
-        <img src="images/MPMPI LOGO.png" alt="MPMPI Logo">
+        <img src="images/mpmpi.png" alt="MPMPI Logo">
     </div>
 
     <nav>
@@ -105,16 +105,18 @@
                 <h3>Open Site</h3>
 
                 <div class="client-grid opensite-grid">
-
+                    <div class="client-card"><img src="images/clients/cmci-logo.png" alt=""></div>
                     <div class="client-card"><img src="images/clients/seascape.png" alt=""></div>
                     <div class="client-card"><img src="images/clients/homedepot.png" alt=""></div>
                     <div class="client-card"><img src="images/clients/robinsonland.png" alt=""></div>
-                    <div class="client-card"><img src="images/clients/South Supermarket.png" alt=""></div>
+                    <div class="client-card"><img src="images/clients/southsupermarket.png" alt=""></div>
                     <div class="client-card"><img src="images/clients/federalland.png" alt=""></div>
                     <div class="client-card"><img src="images/clients/eton.png" alt=""></div>
-                    <div class="client-card"><img src="images/clients/ICTSI.png" alt=""></div>
+                    <div class="client-card"><img src="images/clients/ictsi.png" alt=""></div>
                     <div class="client-card"><img src="images/clients/mbp.png" alt=""></div>
                     <div class="client-card"><img src="images/clients/PBCOM.png" alt=""></div>
+                    
+                    
                 </div>
 
             </div>
@@ -127,7 +129,7 @@
 
                 <div class="client-grid province-grid">
 
-                    <div class="client-card"><img src="images/clients/TM.png" alt=""></div>
+                    <div class="client-card"><img src="images/clients/tm.png" alt=""></div>
                     <div class="client-card"><img src="images/clients/banilad.png" alt=""></div>
                     <div class="client-card"><img src="images/clients/streetscape.png" alt=""></div>
 
@@ -136,8 +138,6 @@
             </div>
 
         </section>
-
-
 
 <footer>
 

@@ -29,7 +29,7 @@ body::before {
     position: fixed;
     inset: 0;
 
-    background: url("../images/Salustania.png") center center no-repeat;
+    background: url("../images/salustania.png") center center no-repeat;
     background-size: cover;      /* Covers the entire page */
 
     opacity: 0.5;                /* 50% opacity */
