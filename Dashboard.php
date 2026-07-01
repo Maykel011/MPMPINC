@@ -21,11 +21,11 @@ $company = $stmt->fetch(PDO::FETCH_ASSOC);
     </div>
 
     <nav>
-        <a href="dashboard.php">Home</a>
-        <a href="services.php">Services</a>
-        <a href="client.php">Clients</a>
-        <a href="careers.php">Careers</a>
-        <a href="contact.php">Contact Us</a>
+        <a href="dashboard">Home</a>
+        <a href="services">Services</a>
+        <a href="client">Clients</a>
+        <a href="careers">Careers</a>
+        <a href="contact">Contact</a>
     </nav>
 </header>
 
