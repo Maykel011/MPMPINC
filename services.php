@@ -10,7 +10,7 @@
 </head>
 <body>
 
-<!-- HEADER -->
+<!-- HEADER --> 
 <header>
     <div class="logo">
         <img src="images/mpmpi.png" alt="MPMPI Logo">

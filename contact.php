@@ -12,7 +12,7 @@
 <body>
 
 <!-- HEADER -->
-<header>
+<header> 
     <div class="logo">
         <img src="images/mpmpi.png" alt="MPMPI Logo">
     </div>
