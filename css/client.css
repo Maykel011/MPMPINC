@@ -212,7 +212,7 @@ nav a.active::after{
 
     max-width:1200px;
 
-    margin:50px auto;
+    margin:25px auto;
 
     padding:50px;
 
@@ -527,12 +527,6 @@ footer{
 ================================================== */
 
 @media (max-width:1200px){
-
-    .section{
-
-        margin:40px 20px;
-
-    }
 
     .client-grid{
 
