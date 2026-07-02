@@ -95,7 +95,6 @@
                     <div class="client-card"><img src="images/clients/mbp.png" alt=""></div>
                     <div class="client-card"><img src="images/clients/pbcom.png" alt=""></div>
                     
-                    
                 </div>
 
             </div>
