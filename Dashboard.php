@@ -13,8 +13,8 @@
         <img src="images/mpmpi.png" alt="MPMPI Logo">
     </div>
 
-    <nav>
-        <a href="dashboard">Home</a>
+   <nav>
+        <a href="dashboard">About us</a>
         <a href="services">Services</a>
         <a href="client">Clients</a>
         <a href="careers">Careers</a>

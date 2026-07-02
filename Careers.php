@@ -16,7 +16,7 @@
     </div>
  
     <nav>
-        <a href="dashboard">Home</a>
+        <a href="dashboard">About us</a>
         <a href="services">Services</a>
         <a href="client">Clients</a>
         <a href="careers">Careers</a>
