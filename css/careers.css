@@ -112,7 +112,7 @@ nav a:hover::after {
 /* SECTION */
 .section {
     max-width: 1200px;
-    margin: 50px auto;
+    margin: 25px auto;
     padding: 50px;
 
     background: #fff;
