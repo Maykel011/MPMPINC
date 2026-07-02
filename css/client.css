@@ -430,11 +430,8 @@ nav a.active::after{
     /* Replace this background */
 background:linear-gradient(
     180deg,
-    #fafafa 0%,
-    #ececec 35%,
-    #d9d9d9 50%,
-    #eeeeee 70%,
-    #ffffff 100%
+    #efefef 0%,
+    #e3e3e3 100%
 );
 
     box-shadow:
@@ -484,6 +481,8 @@ background:linear-gradient(
 
 }
 
+
+
 /* ==================================================
    CLIENT LOGO
 ================================================== */
@@ -532,6 +531,14 @@ background:linear-gradient(
 
 }
 
+/* Move Ecoplaza logo slightly downward */
+.ecoplaza-logo{
+    transform:translateY(6px);
+}
+
+.client-card:hover .ecoplaza-logo{
+    transform:translateY(6px) scale(1.08);
+}
 /* ==================================================
    FOOTER
 ================================================== */

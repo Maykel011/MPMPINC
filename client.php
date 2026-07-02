@@ -59,7 +59,9 @@
                     <div class="client-card"><img src="images/clients/eton.png" alt=""></div>
                     <div class="client-card"><img src="images/clients/federalland.png" alt=""></div>
                     <div class="client-card"><img src="images/clients/regiscenters.png" alt=""></div>
-                    <div class="client-card"><img src="images/clients/ecoplaza.png" alt=""></div>
+                    <div class="client-card">
+    <img src="images/clients/ecoplaza.png" class="ecoplaza-logo" alt="Ecoplaza">
+</div>
 
                 </div>
 
@@ -70,9 +72,8 @@
             <div class="client-category">
 
                 <div class="client-grid hotel-grid">
-
-                    <div class="client-card"><img src="images/clients/peninsula.png" alt=""></div>
                     <div class="client-card"><img src="images/clients/shangri.png" alt=""></div>
+                    <div class="client-card"><img src="images/clients/peninsula.png" alt=""></div>
                     <div class="client-card"><img src="images/clients/jnhs.png" alt=""></div>
 
                 </div>
