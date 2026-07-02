@@ -58,8 +58,8 @@
 
                     <div class="client-card"><img src="images/clients/eton.png" alt=""></div>
                     <div class="client-card"><img src="images/clients/federalland.png" alt=""></div>
-                    <div class="client-card"><img src="images/clients/peninsula.png" alt=""></div>
-                    <div class="client-card"><img src="images/clients/eco.png" alt=""></div>
+                    <div class="client-card"><img src="images/clients/regiscenters.png" alt=""></div>
+                    <div class="client-card"><img src="images/clients/ecoplaza.png" alt=""></div>
 
                 </div>
 
@@ -90,7 +90,6 @@
                     <div class="client-card"><img src="images/clients/robinsonland.png" alt=""></div>
                     <div class="client-card"><img src="images/clients/southsupermarket.png" alt=""></div>
                     <div class="client-card"><img src="images/clients/federalland.png" alt=""></div>
-                    <div class="client-card"><img src="images/clients/eton.png" alt=""></div>
                     <div class="client-card"><img src="images/clients/ictsi.png" alt=""></div>
                     <div class="client-card"><img src="images/clients/mbp.png" alt=""></div>
                     <div class="client-card"><img src="images/clients/pbcom.png" alt=""></div>
