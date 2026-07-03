@@ -56,7 +56,9 @@
 
                 <div class="client-grid office-grid">
 
-                    <div class="client-card"><img src="images/clients/eton.png" alt=""></div>
+                    <div class="client-card">
+    <img src="images/clients/eton.png" class="eton-logo" alt="">
+</div>
                     <div class="client-card"><img src="images/clients/federalland.png" alt=""></div>
                     <div class="client-card"><img src="images/clients/regiscenters.png" alt=""></div>
                     <div class="client-card">
@@ -73,8 +75,13 @@
 
                 <div class="client-grid hotel-grid">
                     <div class="client-card"><img src="images/clients/shangri.png" alt=""></div>
-                    <div class="client-card"><img src="images/clients/peninsula.png" alt=""></div>
-                    <div class="client-card"><img src="images/clients/jnhs.png" alt=""></div>
+                    <div class="client-card">
+    <img src="images/clients/peninsula.png" class="peninsula-logo" alt="">
+</div>
+
+ <div class="client-card">
+            <img src="images/clients/jnhsm.png" class="jnhsm-logo" alt="Joy~Nostalg Hotel & Suites Manila">
+        </div>
 
                 </div>
 
@@ -106,7 +113,9 @@
 
                     <div class="client-card"><img src="images/clients/tm.png" alt=""></div>
                     <div class="client-card"><img src="images/clients/banilad.png" alt=""></div>
-                    <div class="client-card"><img src="images/clients/streetscape.png" alt=""></div>
+                    <div class="client-card">
+    <img src="images/clients/streetscape.png" class="streetscape-logo" alt="">
+</div>
 
                 </div>
 

@@ -539,6 +539,51 @@ background:linear-gradient(
 .client-card:hover .ecoplaza-logo{
     transform:translateY(6px) scale(1.08);
 }
+
+/* ==========================================
+   LARGE LOGOS
+========================================== */
+
+.eton-logo{
+    max-width:98%;
+    max-height:98%;
+    transform:scale(1.22);
+}
+
+.peninsula-logo{
+    max-width:98%;
+    max-height:98%;
+    transform:scale(1.22);
+}
+
+.streetscape-logo{
+    max-width:98%;
+    max-height:98%;
+    transform:scale(1.22);
+}
+
+.jnhsm-logo{
+    max-width:98%;
+    max-height:98%;
+    transform:scale(1.22);
+}
+
+.client-card:hover .eton-logo{
+    transform:scale(1.26);
+}
+
+.client-card:hover .peninsula-logo{
+    transform:scale(1.26);
+}
+
+.client-card:hover .streetscape-logo{
+    transform:scale(1.26);
+}
+
+.client-card:hover .jnhsm-logo{
+    transform:scale(1.28);
+}
+
 /* ==================================================
    FOOTER
 ================================================== */
