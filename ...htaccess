@@ -1,0 +1,74 @@
+# ====================================================
+# MPMPINC
+# Apache / InfinityFree Compatible
+# ====================================================
+
+Options -Indexes
+
+DirectoryIndex dashboard.php index.php
+
+RewriteEngine On
+RewriteBase /
+
+# ----------------------------------------------------
+# Redirect .php to clean URL
+# Example:
+# services.php -> /services
+# ----------------------------------------------------
+
+RewriteCond %{THE_REQUEST} \s/([^.]+)\.php[\s?] [NC]
+RewriteRule ^([^.]+)\.php$ /$1 [R=301,L]
+
+# ----------------------------------------------------
+# Internally load php
+# Example:
+# /services -> services.php
+# ----------------------------------------------------
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^([^/]+)/?$ $1.php [L,QSA]
+
+# ----------------------------------------------------
+# Remove index.php
+# ----------------------------------------------------
+
+RewriteCond %{THE_REQUEST} \s/index\.php[\s?] [NC]
+RewriteRule ^index\.php$ / [R=301,L]
+
+# ----------------------------------------------------
+# Block hidden files
+# ----------------------------------------------------
+
+RedirectMatch 403 /\.
+
+# ----------------------------------------------------
+# Browser Cache
+# ----------------------------------------------------
+
+<IfModule mod_expires.c>
+
+ExpiresActive On
+
+ExpiresByType image/png "access plus 1 year"
+ExpiresByType image/jpeg "access plus 1 year"
+ExpiresByType image/webp "access plus 1 year"
+
+ExpiresByType text/css "access plus 1 month"
+ExpiresByType application/javascript "access plus 1 month"
+
+</IfModule>
+
+# ----------------------------------------------------
+# Compression
+# ----------------------------------------------------
+
+<IfModule mod_deflate.c>
+
+AddOutputFilterByType DEFLATE text/html
+AddOutputFilterByType DEFLATE text/plain
+AddOutputFilterByType DEFLATE text/css
+AddOutputFilterByType DEFLATE application/javascript
+
+</IfModule>
