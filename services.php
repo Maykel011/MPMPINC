@@ -107,7 +107,7 @@
         With success comes recognition. MPMPI is honored to have received prestigious awards in recognition of its commitment to excellence and outstanding service. These awards were conferred based on the evaluation of consumers and marketing professionals, recognizing the company's Best Marketing Practices through comprehensive surveys, focus group discussions, and market research.
     </p>
 
-    <div class="mission-vision">
+    <div class="awards-box">
 
         <div class="info-box">
             <h3>Best Car Park</h3>
