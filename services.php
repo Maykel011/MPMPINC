@@ -107,40 +107,61 @@
         With success comes recognition. MPMPI is honored to have received prestigious awards in recognition of its commitment to excellence and outstanding service. These awards were conferred based on the evaluation of consumers and marketing professionals, recognizing the company's Best Marketing Practices through comprehensive surveys, focus group discussions, and market research.
     </p>
 
-    <div class="awards-box">
+<div class="awards-box">
 
-        <div class="info-box">
-            <h3>Best Car Park</h3>
-            <p>
-                Awarded by National Product Quality Excellence and Seal of Product Quality on September 21, 2005.
-            </p>
-        </div>
-
-        <div class="info-box">
-            <h3>Most Outstanding Innovative Car Park</h3>
-            <p>
-                Awarded by Philippine Marketing Excellence Awards Institute, Inc. and partner organizations in 2005.
-            </p>
-        </div>
-
-
-<div class="awards-gallery">
-
-    <div class="award-box">
-        <img src="images/award1.png"
-             alt="Award 1"
-             class="award-img"
-             onclick="openModal(this)">
+    <!-- AWARD 1 -->
+    <div class="info-box">
+       
+        <h3>Best Car Park</h3>
+        <p>
+            Awarded by National Product Quality Excellence and Seal of Product Quality on September 21, 2005.
+        </p>
+         <img src="images/award.png" class="award-icon">
     </div>
 
-    <div class="award-box">
-        <img src="images/award2.png"
-             alt="Award 2"
-             class="award-img"
-             onclick="openModal(this)">
+    <!-- AWARD 2 -->
+    <div class="info-box">
+        
+        <h3>Most Outstanding Innovative Car Park</h3>
+        <p>
+            Awarded by Philippine Marketing Excellence Awards Institute, Inc. and partner organizations in 2005.
+        </p>
+        <img src="images/award1.png" class="award-icon">
+    </div>
+
+    <!-- NEW AWARD 3 -->
+    <div class="info-box">
+        
+        <h3>Excellence in Parking Management</h3>
+        <p>Recognized for operational excellence and high efficiency in parking systems.</p>
+    <img src="images/trophy.png" class="award-icon">
+    </div>
+
+    <!-- NEW AWARD 4 -->
+    <div class="info-box">
+        
+        <h3>Customer Satisfaction Award</h3>
+        <p>For consistently delivering excellent customer service experience.</p>
+    <img src="images/trophy.png" class="award-icon">
+    </div>
+
+    <!-- NEW AWARD 5 -->
+    <div class="info-box">
+      
+        <h3>Safety Compliance Award</h3>
+        <p>For maintaining strict safety standards and policies.</p>
+     <img src="images/trophy.png" class="award-icon">
+    </div>
+
+    <!-- NEW AWARD 6 -->
+    <div class="info-box">
+        <h3>Top Service Provider</h3>
+        <p>Recognized as one of the leading service providers in the parking industry.</p>
+      <img src="images/trophy.png" class="award-icon">
     </div>
 
 </div>
+        
 
 
 
