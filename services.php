@@ -129,7 +129,6 @@
         <img src="images/Most Outstanding Innovative Car Park.png" class="award-icon">
     </div>
     
-
     <!-- NEW AWARD 3 -->
     <div class="info-box">
         
@@ -160,44 +159,6 @@
         <p>Recognized as one of the leading service providers in the parking industry.</p>
       <img src="images/trophy.png" class="award-icon">
     </div>
-    
-    <div class="info-box">
-        <h3>Title</h3>
-        <p>Description</p>
-        <img src="images/trophy.png" class="award-icon">
-    </div>
-
-    <div class="info-box">
-        <h3>Title</h3>
-        <p>Description</p>
-        <img src="images/trophy.png" class="award-icon">
-    </div>
-    
-    <div class="info-box">
-        <h3>Title</h3>
-        <p>Description</p>
-        <img scr="images/trophy.png" class="award-icon">
-</div>
-
-    <div class="info-box">
-        <h3>Title</h3>
-        <p>Description</p>
-        <img scr="images/trophy.png" class="award-icon">
-</div>
-
-    <div class="info-box">
-        <h3>Title</h3>
-        <p>Description</p>
-        <img scr="images/trophy.png" class="award-icon">
-</div>
-
-    <div class="info-box">
-        <h3>Title</h3>
-        <p>Description</p>
-        <img scr="images/trophy.png" class="award-icon">
-</div>
-
-
 </div>
 
     </div>
