@@ -179,6 +179,27 @@
         <img scr="images/trophy.png" class="award-icon">
 </div>
 
+    <div class="info-box">
+        <h3>Title</h3>
+        <p>Description</p>
+        <img scr="images/trophy.png" class="award-icon">
+</div>
+
+    <div class="info-box">
+        <h3>Title</h3>
+        <p>Description</p>
+        <img scr="images/trophy.png" class="award-icon">
+</div>
+
+    <div class="info-box">
+        <h3>Title</h3>
+        <p>Description</p>
+        <img scr="images/trophy.png" class="award-icon">
+</div>
+
+
+
+
 </div>
 
     </div>
