@@ -116,7 +116,7 @@
         <p>
             Awarded by National Product Quality Excellence and Seal of Product Quality on September 21, 2005.
         </p>
-         <img src="images/award.png" class="award-icon">
+         <img src="images/Best Car Park.png" class="award-icon">
     </div>
 
     <!-- AWARD 2 -->
@@ -126,7 +126,7 @@
         <p>
             Awarded by Philippine Marketing Excellence Awards Institute, Inc. and partner organizations in 2005.
         </p>
-        <img src="images/award1.png" class="award-icon">
+        <img src="images/Most Outstanding Innovative Car Park.png" class="award-icon">
     </div>
     
 
@@ -196,8 +196,6 @@
         <p>Description</p>
         <img scr="images/trophy.png" class="award-icon">
 </div>
-
-
 
 
 </div>
