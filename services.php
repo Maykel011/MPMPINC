@@ -129,36 +129,8 @@
         <img src="images/Most Outstanding Innovative Car Park.png" class="award-icon">
     </div>
     
-    <!-- NEW AWARD 3 -->
-    <div class="info-box">
-        
-        <h3>Excellence in Parking Management</h3>
-        <p>Recognized for operational excellence and high efficiency in parking systems.</p>
-    <img src="images/trophy.png" class="award-icon">
-    </div>
 
-    <!-- NEW AWARD 4 -->
-    <div class="info-box">
-        
-        <h3>Customer Satisfaction Award</h3>
-        <p>For consistently delivering excellent customer service experience.</p>
-    <img src="images/trophy.png" class="award-icon">
-    </div>
-
-    <!-- NEW AWARD 5 -->
-    <div class="info-box">
-      
-        <h3>Safety Compliance Award</h3>
-        <p>For maintaining strict safety standards and policies.</p>
-     <img src="images/trophy.png" class="award-icon">
-    </div>
-
-    <!-- NEW AWARD 6 -->
-    <div class="info-box">
-        <h3>Top Service Provider</h3>
-        <p>Recognized as one of the leading service providers in the parking industry.</p>
-      <img src="images/trophy.png" class="award-icon">
-    </div>
+    
 </div>
 
     </div>
