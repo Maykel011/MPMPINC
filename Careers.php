@@ -310,7 +310,7 @@
         <label>Contact Number</label>
 
         <input
-            type="text"
+            type="number"
             name="contact"
             placeholder="09XXXXXXXXX"
             maxlength="11"
