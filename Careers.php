@@ -8,7 +8,7 @@
 
     <title>Careers - MPMPI</title>
 
-    <link rel="stylesheet" href="css/careers.css">
+    <link rel="stylesheet" href="css/career.css">
 
 </head>
 
@@ -250,9 +250,10 @@
 
         <div class="apply-modal-body">
 
-            <form>
-
-                <form action="backend/careerBE.php" method="POST" enctype="multipart/form-data">
+<form action="backend/careerBE.php"
+      method="POST"
+      enctype="multipart/form-data"
+      novalidate>
 
     <!-- Defined Position -->
     <div class="apply-group">
@@ -428,14 +429,6 @@
     <!-- Buttons -->
     <div class="apply-buttons">
 
-        <button
-            type="button"
-            class="cancel-btn"
-            id="cancelApply">
-
-            Cancel
-
-        </button>
 
         <button
             type="submit"
@@ -455,6 +448,33 @@
 
 </div>
 
+
+<!-- ==========================================
+     VALIDATION MODAL
+========================================== -->
+
+<div class="validation-modal" id="validationModal">
+
+    <div class="validation-box">
+
+        <div class="validation-icon">
+            &#9888;
+        </div>
+
+        <h2>Incomplete Application</h2>
+
+        <p id="validationMessage">
+            Please complete all required fields before submitting your application.
+        </p>
+
+        <button id="validationOk" class="validation-btn">
+            OK
+        </button>
+
+    </div>
+
+</div>
+
 <!-- =====================================================
      FOOTER
 ===================================================== -->
@@ -466,7 +486,7 @@
 
 </footer>
 
-<script src="js/apply.js"></script>
+<script src="js/apply1.js"></script>
 
 </body>
 </html>

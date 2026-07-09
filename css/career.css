@@ -700,52 +700,34 @@ footer {
 .apply-buttons{
 
     display:flex;
-
     justify-content:flex-end;
-
     gap:15px;
 
     margin-top:35px;
-
     padding-top:20px;
 
     border-top:1px solid #ececec;
 
-    position:sticky;
-
-    bottom:0;
-
     background:#fff;
 
-}
+    opacity:0;
+    visibility:hidden;
 
-.cancel-btn{
+    transform:translateY(20px);
 
-    padding:14px 32px;
-
-    border:none;
-
-    border-radius:10px;
-
-    background:#e4e4e4;
-
-    color:#444;
-
-    font-size:15px;
-
-    font-weight:600;
-
-    cursor:pointer;
-
-    transition:.30s;
+    transition:.35s ease;
 
 }
 
-.cancel-btn:hover{
+.apply-buttons.show{
 
-    background:#d3d3d3;
+    opacity:1;
+    visibility:visible;
+
+    transform:translateY(0);
 
 }
+
 
 .submit-btn{
 
@@ -881,5 +863,132 @@ footer {
         border-color .25s ease,
         box-shadow .25s ease,
         background .25s ease;
+
+}
+
+/* ==========================================
+   VALIDATION MODAL
+========================================== */
+
+.validation-modal{
+
+    position:fixed;
+
+    inset:0;
+
+    display:none;
+
+    justify-content:center;
+    align-items:center;
+
+    background:rgba(0,0,0,.55);
+
+    backdrop-filter:blur(6px);
+
+    z-index:999999;
+
+}
+
+.validation-box{
+
+    width:90%;
+    max-width:420px;
+
+    background:#fff;
+
+    border-radius:18px;
+
+    padding:35px;
+
+    text-align:center;
+
+    animation:validationPopup .30s ease;
+
+    box-shadow:0 20px 60px rgba(0,0,0,.25);
+
+}
+
+.validation-icon{
+
+    width:80px;
+    height:80px;
+
+    margin:auto;
+
+    border-radius:50%;
+
+    background:#fff4d6;
+
+    color:#f0a500;
+
+    font-size:42px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    margin-bottom:20px;
+
+}
+
+.validation-box h2{
+
+    color:#2f8f2f;
+
+    margin-bottom:15px;
+
+}
+
+.validation-box p{
+
+    color:#555;
+
+    margin-bottom:30px;
+
+    line-height:1.7;
+
+}
+
+.validation-btn{
+
+    border:none;
+
+    background:#43B143;
+
+    color:#fff;
+
+    padding:14px 45px;
+
+    border-radius:10px;
+
+    cursor:pointer;
+
+    font-size:15px;
+
+    transition:.30s;
+
+}
+
+.validation-btn:hover{
+
+    background:#2f8f2f;
+
+}
+
+@keyframes validationPopup{
+
+    from{
+
+        opacity:0;
+        transform:scale(.9);
+
+    }
+
+    to{
+
+        opacity:1;
+        transform:scale(1);
+
+    }
 
 }
