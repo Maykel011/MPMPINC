@@ -165,10 +165,10 @@ document.getElementById('applicationForm').addEventListener('submit', function(e
     
     var formData = new FormData(this);
     
-    fetch('backend/careerBE.php', {
-        method: 'POST',
-        body: formData
-    })
+fetch('backend/careerBE.php', {
+    method: 'POST',
+    body: formData
+})
     .then(function(response) {
         return response.text();
     })

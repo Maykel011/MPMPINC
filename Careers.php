@@ -248,6 +248,6 @@ if (isset($_SESSION['application_success']) && $_SESSION['application_success'])
     &copy; <?php echo date('Y'); ?> MPMPI. All Rights Reserved.
 </footer>
 
-<script src="js/apply.js"></script>
+<script src="javascript/applicants.js"></script>
 </body>
 </html>
