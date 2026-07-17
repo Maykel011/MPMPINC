@@ -153,66 +153,223 @@ nav a:hover::after {
     margin-bottom: 20px;
 }
 
-/* AWARDS BOX */
+/* ========================================
+   AWARDS SECTION - IMAGES AS BACKGROUND
+   ======================================== */
+
 .awards-box {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 25px;
     margin-top: 30px;
 }
 
+/* Award Card - Image as Background */
 .info-box {
-    background: #f8fff8;
-    border-left: 5px solid #43B143;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: 0.4s ease;
+    border: 4px solid #43B143;
+    box-shadow: 0 8px 25px rgba(67, 177, 67, 0.15);
+    display: flex;
+    flex-direction: column;
+    min-height: 380px;
+    position: relative;
+    
+    /* Background image settings */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    /* Fallback background color if image doesn't load */
+    background-color: #e8f5e9;
+}
 
-    padding: 30px;
+/* Dark overlay for better text readability */
+.info-box::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.1) 0%,
+        rgba(0, 0, 0, 0.6) 40%,
+        rgba(0, 0, 0, 0.85) 100%
+    );
+    z-index: 1;
+    transition: 0.4s ease;
+}
+
+/* Hover effect - overlay darkens slightly */
+.info-box:hover::before {
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.2) 0%,
+        rgba(0, 0, 0, 0.7) 40%,
+        rgba(0, 0, 0, 0.9) 100%
+    );
+}
+
+/* Inner border effect */
+.info-box::after {
+    content: '';
+    position: absolute;
+    inset: 8px;
+    border: 2px solid rgba(255, 255, 255, 0.15);
     border-radius: 10px;
-
-    transition: 0.3s;
+    z-index: 1;
+    pointer-events: none;
 }
 
 .info-box:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 20px 50px rgba(67, 177, 67, 0.35);
+    border-color: #2f8f2f;
+}
+
+/* Overlay that contains the text */
+.info-overlay {
+    position: relative;
+    z-index: 2;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 25px;
+    min-height: 380px;
+}
+
+/* Content with improved readability */
+.info-content {
+    padding: 20px 22px;
+    border-radius: 12px;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: 0.4s ease;
+}
+
+.info-box:hover .info-content {
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
     transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(67, 177, 67, 0.15);
 }
 
 .info-box h3 {
-    color: #2f8f2f;
-    margin-bottom: 10px;
+    color: #ffffff;
+    margin-bottom: 8px;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.4;
+    position: relative;
+    padding-bottom: 10px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-/* FOOTER */
-footer {
-    background: #2f8f2f;
-    color: white;
-    text-align: center;
-    padding: 20px;
-    margin-top: 50px;
+.info-box h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 40px;
+    height: 3px;
+    background: linear-gradient(to right, #79C679, #43B143);
+    border-radius: 2px;
 }
 
-/* RESPONSIVE */
+.info-box p {
+    color: #f0f0f0;
+    font-size: 13.5px;
+    line-height: 1.7;
+    margin-bottom: 0;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+    font-weight: 400;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+    .awards-box {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+    
+    .info-box {
+        min-height: 350px;
+    }
+    
+    .info-overlay {
+        min-height: 350px;
+        padding: 20px;
+    }
+    
+    .info-box h3 {
+        font-size: 17px;
+    }
+    
+    .info-box p {
+        font-size: 13px;
+    }
+    
+    .info-content {
+        padding: 18px 20px;
+    }
+}
+
 @media (max-width: 768px) {
-
-    header {
-        flex-direction: column;
-        height: auto;
-        padding: 15px 20px;
-        gap: 10px;
+    .awards-box {
+        grid-template-columns: 1fr 1fr;
+        gap: 18px;
     }
-
-    nav {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 15px;
+    
+    .info-box {
+        min-height: 320px;
     }
-
-    .section {
-        margin: 20px;
-        padding: 25px;
+    
+    .info-overlay {
+        min-height: 320px;
+        padding: 18px;
     }
+    
+    .info-content {
+        padding: 16px 18px;
+    }
+    
+    .info-box h3 {
+        font-size: 16px;
+    }
+    
+    .info-box p {
+        font-size: 12.5px;
+    }
+}
 
-    .hero h1 {
-        font-size: 30px;
+@media (max-width: 550px) {
+    .awards-box {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .info-box {
+        min-height: 350px;
+    }
+    
+    .info-overlay {
+        min-height: 350px;
+        padding: 20px;
+    }
+    
+    .info-content {
+        padding: 20px 22px;
+    }
+    
+    .info-box h3 {
+        font-size: 18px;
+    }
+    
+    .info-box p {
+        font-size: 14px;
     }
 }
 
@@ -247,8 +404,6 @@ footer {
     transition: 0.3s ease;
 }
 
-
-
 .iso-title-img:hover {
     transform: scale(1.03);
     box-shadow: 0 10px 25px rgba(0,0,0,0.2);
@@ -267,8 +422,6 @@ footer {
         height: 80px;
     }
 }
-
-
 
 /* AWARDS GALLERY */
 .awards-gallery {
@@ -315,4 +468,3 @@ footer {
 
     transition: 0.3s ease;
 }
-
