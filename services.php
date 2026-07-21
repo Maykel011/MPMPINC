@@ -117,7 +117,6 @@
             </div>
         </div>
     </div>
-    
 
     <!-- AWARD 2 -->
     <div class="info-box" style="background-image: url('images/awards/philippines marketing.png');" onclick="openModal(1)">
