@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Services - MPMPI</title>
 
-    <!-- SERVICES ONLY CSS -->
-    <link rel="stylesheet" href="css/Services123.css">
+    <link rel="stylesheet" href="css/Services.css"> 
+    <script src="javascript/Services.js" defer></script>
 </head>
 <body>
 
@@ -24,8 +24,6 @@
         <a href="contact">Contact</a>
     </nav>
 </header>
-
-
 
 <!-- SERVICES -->
 <section class="section">
@@ -70,8 +68,6 @@
 
             <p>
 
-
-
                 The classic perception of being an industry leader is often measured by the numbers. The higher the figures a company achieves, the more successful, competitive, and influential it is perceived to be. However, another important measure of a company's leadership is the level of satisfaction it provides to its customers.
 
 				This is where Metro Parking Management Philippines, Inc. (MPMPI) affirms its leadership. It is the primary reason we established Metro Parking in the Philippines to provide an exceptional parking experience and deliver above-par quality service to our clients.
@@ -81,13 +77,13 @@
             </p> 
        
        		  <P>
-                MPMPI's pursuit of excellence reached a significant milestone after six months of dedicated planning, preparation, and commitment to 				 quality. 
+                MPMPI's pursuit of excellence reached a significant milestone after six months of dedicated planning, preparation, and commitment to quality. 
     
-                These efforts culminated in the successful attainment of the <b>ISO 9001:2000 Certification for the Management of Car Parks</b>, 				 	awarded by TUV Philippines.
+                These efforts culminated in the successful attainment of the <b>ISO 9001:2000 Certification for the Management of Car Parks</b>, awarded by TUV Philippines.
                     
-                The certification followed an extensive assessment of the company's management systems and operational processes. Through this 						rigorous evaluation, TUV Philippines verified that MPMPI consistently met the international standards for quality management in the 				parking industry.
+                The certification followed an extensive assessment of the company's management systems and operational processes. Through this rigorous evaluation, TUV Philippines verified that MPMPI consistently met the international standards for quality management in the parking industry.
                 
-                Officially awarded on February 27, 2006, the certification stands as a testament to MPMPI's unwavering dedication to providing 						reliable, efficient, and customer-focused parking management services.
+                Officially awarded on February 27, 2006, the certification stands as a testament to MPMPI's unwavering dedication to providing reliable, efficient, and customer-focused parking management services.
             </p>
 
         </div>
@@ -96,7 +92,6 @@
     </div>
 
 </section>
-
 
 <!-- AWARDS -->
 
@@ -111,63 +106,68 @@
 <div class="awards-box">
 
     <!-- AWARD 1 -->
-    <div class="info-box" style="background-image: url('images/awards/Best Car Park.png');">
+    <div class="info-box" style="background-image: url('images/awards/Best Car Park.png');" onclick="openModal(0)">
         <div class="info-overlay">
             <div class="info-content">
                 <h3>Best Car Park 2005</h3>
                 <p>
                     Awarded by National Product Quality Excellence and Seal of Product Quality on September 21, 2005.
                 </p>
+                <span class="view-details">Click to view details →</span>
             </div>
         </div>
     </div>
     
 
     <!-- AWARD 2 -->
-    <div class="info-box" style="background-image: url('images/awards/philippines marketing.png');">
+    <div class="info-box" style="background-image: url('images/awards/philippines marketing.png');" onclick="openModal(1)">
         <div class="info-overlay">
             <div class="info-content">
                 <h3>Most Outstanding Innovative Car Park</h3>
                 <p>
                     Awarded by Philippine Marketing Excellence Awards Institute, Inc. and partner organizations in 2005.
                 </p>
+                <span class="view-details">Click to view details →</span>
             </div>
         </div>
     </div>
 
     <!-- AWARD 3 -->
-    <div class="info-box" style="background-image: url('images/awards/MACB.png');">
+    <div class="info-box" style="background-image: url('images/awards/MACB.png');" onclick="openModal(2)">
         <div class="info-overlay">
             <div class="info-content">
                 <h3>Most Admired Companies and Brands</h3>
                 <p>
-                   Awarded to Metro Parking MGMT (Phils.) Inc. by McCallum and Trout Global Associates and partner organizations.
+                    Metro Parking MGMT (Phils.) Inc. By the McCallum and Trout Global Associates La Veco Business Consulting Philippines Best Research Council and the Prosaver e-Philippines Marketing.
                 </p>
+                <span class="view-details">Click to view details →</span>
             </div>
         </div>
     </div>
     
     
     <!-- AWARD 4 -->
-    <div class="info-box" style="background-image: url('images/awards/SBP.png');">
+    <div class="info-box" style="background-image: url('images/awards/SBP.png');" onclick="openModal(3)">
         <div class="info-overlay">
             <div class="info-content">
                 <h3>Star Brand Philippines</h3>
                 <p>
                     Recognized for excellence in brand leadership and market innovation.
                 </p>
+                <span class="view-details">Click to view details →</span>
             </div>
         </div>
     </div>
     
     <!-- AWARD 5 -->
-    <div class="info-box" style="background-image: url('images/awards/ASIAN STAR BRANDS.png');">
+    <div class="info-box" style="background-image: url('images/awards/ASIAN STAR BRANDS.png');" onclick="openModal(4)">
         <div class="info-overlay">
             <div class="info-content">
                 <h3>Asian Star Brand</h3>
                 <p>
                     Honored as a leading brand in the Asian market for quality and service excellence.
                 </p>
+                <span class="view-details">Click to view details →</span>
             </div>
         </div>
     </div>
@@ -175,8 +175,32 @@
 
 </section>
 
+<!-- MODAL -->
+<div id="awardModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        
+        <div class="modal-body">
+            <div class="modal-image-container">
+                <img id="modalImage" src="" alt="Award Image">
+            </div>
+            <div class="modal-text">
+                <h2 id="modalTitle"></h2>
+                <p id="modalDescription"></p>
+                <div class="modal-counter" id="modalCounter"></div>
+            </div>
+        </div>
+        
+        <div class="modal-nav">
+            <button class="nav-btn prev-btn" onclick="prevAward()">← Previous</button>
+            <button class="nav-btn next-btn" onclick="nextAward()">Next →</button>
+        </div>
+    </div>
+</div>
+
+<!-- FOOTER -->
 <footer>
-    &copy; <?php echo date('Y'); ?> MPMPI. All Rights Reserved.
+    &copy; <?php echo date('1998'); ?> MPMPI. All Rights Reserved.
 </footer>
 
 </body>
