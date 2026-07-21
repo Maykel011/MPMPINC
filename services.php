@@ -55,10 +55,10 @@
     <div class="iso-header">
     <h2>ISO Certification</h2>
 
-    <img src="images/isocertification.png" 
+    <!-- <img src="images/isocertification.png" 
      alt="ISO Certification" 
      class="iso-title-img"
-         >
+         > -->
 
 </div>
 
