@@ -24,11 +24,11 @@ if (isset($_SESSION['application_success']) && $_SESSION['application_success'])
         <img src="images/mpmpi.png" alt="MPMPI Logo">
     </div>
     <nav>
-        <a href="dashboard.php">About us</a>
         <a href="services.php">Services</a>
         <a href="client.php">Clients</a>
         <a href="careers.php">Careers</a>
         <a href="contact.php">Contact</a>
+        <a href="About Us.php">About us</a>
     </nav>
 </header>
 

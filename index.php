@@ -1,4 +1,4 @@
 <?php
-header("Location: dashboard.php");
+header("Location: About Us.php");
 exit;
 ?>

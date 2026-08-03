@@ -18,11 +18,11 @@
     </div>
 
     <nav>
-        <a href="dashboard">About us</a>
         <a href="services">Services</a>
         <a href="client">Clients</a>
         <a href="careers">Careers</a>
         <a href="contact">Contact</a>
+        <a href="About Us">About us</a>
     </nav>
 </header>
 
