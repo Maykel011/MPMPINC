@@ -18,7 +18,7 @@ const awards = [
     {
         title: "Star Brand Philippines",
         description: "Recognized for excellence in brand leadership and market innovation. This award celebrates MPMPI's strong brand presence and its ability to consistently deliver value to customers across the Philippines.",
-        image: "images/awards/SBP.png"
+        image: "images/awards/Star Brand Philippines.png"
     },
     {
         title: "Asian Star Brand",

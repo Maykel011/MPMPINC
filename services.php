@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="css/Services123.css">
     
     <!-- SERVICES JAVASCRIPT -->
-    <script src="javascript/Service.js" defer></script>
+    <script src="javascript/Services-awards.js" defer></script>
 </head>
 <body>
 
@@ -24,7 +24,7 @@
         <a href="client">Clients</a>
         <a href="careers">Careers</a>
         <a href="contact">Contact</a>
-        <a href="About Us">About us</a>
+        <a href="About us">About us</a>
     </nav>
 </header>
 
@@ -148,8 +148,9 @@
     </div>
     
     
-    <!-- AWARD 4 -->
-    <div class="info-box" style="background-image: url('images/awards/awards/Best Car Park.png');" onclick="openModal(3)">
+
+     <!-- AWARD 4 -->
+    <div class="info-box" style="background-image: url('images/awards/Star Brand Philippines.png');" onclick="openModal(3)">
         <div class="info-overlay">
             <div class="info-content">
                 <h3>Star Brand Philippines</h3>
