@@ -28,7 +28,7 @@ if (isset($_SESSION['application_success']) && $_SESSION['application_success'])
         <a href="client.php">Clients</a>
         <a href="careers.php">Careers</a>
         <a href="contact.php">Contact</a>
-        <a href="About Us.php">About us</a>
+        <a href="About us.php">About us</a>
     </nav>
 </header>
 

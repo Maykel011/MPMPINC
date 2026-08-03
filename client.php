@@ -21,7 +21,7 @@
         <a href="client">Clients</a>
         <a href="careers">Careers</a>
         <a href="contact">Contact</a>
-        <a href="About Us">About us</a>
+        <a href="About us">About us</a>
     </nav>
 
 </header>

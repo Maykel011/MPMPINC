@@ -1,4 +1,4 @@
 <?php
-header("Location: About Us.php");
+header("Location: About us.php");
 exit;
 ?>
