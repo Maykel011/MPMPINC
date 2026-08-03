@@ -31,7 +31,7 @@
     <p>
         <b>Metro Parking Management (Philippines) Inc.</b> (MPMPI) was established in <b>September 1998</b>
         with the core business activity in <b>Car Park Management and Consultancy</b>. As a 100%
-        owned company within the Metro Parking Group, MPMPI maintains a high level of
+        owned company within the <b>JLG METRO SDN BHD</b>, MPMPI maintains a high level of
         professionalism in the service we provide. As such, our main objective is to be the
         market leader in the car park management industry that places integrity and diligence
         as its top priority.
@@ -41,8 +41,8 @@
 
     <p>
         MPMPI was set with the initial paid-up capital of USD <b>200,000.00</b>. The parent
-        company, Metro Parking Group, with 50 man-years of experience, was incorporated
-        in <b>1991</b> under the umbrella of <b>Johor Corporation Group of Companies</b>. It became a market leader in 
+        company, <b>JLG METRO SDN BHD</b>, with 50 man-years of experience, was incorporated
+        in <b>1991</b> under the umbrella of <b>JLG Integra Sdn Bhd (A JCorp Company)</b>. It became a market leader in 
         Malaysia and Singapore within two years of operation and is now an established leader in both countries.
     </p>
 

@@ -1,9 +1,8 @@
 <?php
-
-$host = "localhost";
-$dbname = "mpmpi_db";
-$username = "root";
-$password = "";
+$host = "sql209.infinityfree.com";
+$dbname = "if0_42309582_mpmpi_db";
+$username = "if0_42309582";
+$password = "Metroaccess888";
  
 try {
     $pdo = new PDO(
@@ -11,10 +10,14 @@ try {
         $username,
         $password
     );
-
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
+    $pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
 } catch(PDOException $e) {
-    die("Database Connection Failed: " . $e->getMessage());
+    header('Content-Type: application/json');
+    echo json_encode(array(
+        'success' => false,
+        'message' => 'Database Connection Failed: ' . $e->getMessage()
+    ));
+    exit;
 }
 ?>

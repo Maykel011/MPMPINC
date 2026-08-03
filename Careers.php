@@ -15,7 +15,7 @@ if (isset($_SESSION['application_success']) && $_SESSION['application_success'])
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Careers - MPMPI</title>
-    <link rel="stylesheet" href="css/career.css">
+    <link rel="stylesheet" href="css/careers1.css">
 </head>
 <body>
 
@@ -64,8 +64,8 @@ if (isset($_SESSION['application_success']) && $_SESSION['application_success'])
             <h3>Walk-In</h3>
             <p>
                 4/F Salustiana D. Ty Tower <br>
-                104 Paseo De Roxas corner Perea St. <br>
-                Legaspi Village, Makati City
+                104 Paseo De Roxas corner Perea St.
+                Legaspi Village, Makati City <br>
             </p>
         </div>
         <div class="info-box">
@@ -85,7 +85,10 @@ if (isset($_SESSION['application_success']) && $_SESSION['application_success'])
 <section class="section">
     <div class="job-header">
         <h2>Job Opportunities</h2>
-        <button class="apply-btn" onclick="openApplyModal()">Apply Now</button>
+        
+        <!-- remove the (<!-- )-->
+       <!-- <button class="apply-btn" onclick="openApplyModal()">Apply Now</button> -->
+        
     </div>
     <div class="job-container">
         <div class="job-box">
@@ -147,9 +150,9 @@ if (isset($_SESSION['application_success']) && $_SESSION['application_success'])
                 <button class="modal-close" onclick="closeApplyModal()">&times;</button>
             </div>
             <div class="modal-body">
-                <form id="applicationForm" action="backend/careerBE.php" method="POST" enctype="multipart/form-data">
+                <form id="applicationForm" action="careerbackend.php" method="POST" enctype="multipart/form-data">
                     <div class="form-group">
-                        <label>Defined Position</label>
+                        <label>Desired Position</label>
                         <select name="position" required>
                             <option value="">Select Position</option>
                             <option value="Parking Attendant (Male)">Parking Attendant (Male)</option>
@@ -245,9 +248,9 @@ if (isset($_SESSION['application_success']) && $_SESSION['application_success'])
 </div>
 
 <footer>
-    &copy; <?php echo date('Y'); ?> MPMPI. All Rights Reserved.
+    &copy; <?php echo date('1998'); ?> MPMPI. All Rights Reserved.
 </footer>
 
-<script src="javascript/applicants.js"></script>
+<script src="javascript/applied.js"></script>
 </body>
 </html>

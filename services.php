@@ -5,8 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Services - MPMPI</title>
 
-    <link rel="stylesheet" href="css/Services.css"> 
-    <script src="javascript/Services.js" defer></script>
+    <!-- SERVICES ONLY CSS -->
+    <link rel="stylesheet" href="css/Services123.css">
+    
+    <!-- SERVICES JAVASCRIPT -->
+    <script src="javascript/Service.js" defer></script>
 </head>
 <body>
 
@@ -55,10 +58,9 @@
     <div class="iso-header">
     <h2>ISO Certification</h2>
 
-    <!-- <img src="images/isocertification.png" 
+  <!--  <img src="images/isocertification.png" 
      alt="ISO Certification" 
-     class="iso-title-img"
-         > -->
+     class="iso-title-img"> -->
 
 </div>
 
@@ -106,7 +108,7 @@
 <div class="awards-box">
 
     <!-- AWARD 1 -->
-    <div class="info-box" style="background-image: url('images/awards/Best Car Park.png');" onclick="openModal(0)">
+    <div class="info-box" style="background-image: url('images/awards/NATIONAL PRODUCT EXCELLENCE.png');" onclick="openModal(0)">
         <div class="info-overlay">
             <div class="info-content">
                 <h3>Best Car Park 2005</h3>
@@ -117,6 +119,7 @@
             </div>
         </div>
     </div>
+    
 
     <!-- AWARD 2 -->
     <div class="info-box" style="background-image: url('images/awards/philippines marketing.png');" onclick="openModal(1)">
@@ -146,7 +149,7 @@
     
     
     <!-- AWARD 4 -->
-    <div class="info-box" style="background-image: url('images/awards/SBP.png');" onclick="openModal(3)">
+    <div class="info-box" style="background-image: url('images/awards/awards/Best Car Park.png');" onclick="openModal(3)">
         <div class="info-overlay">
             <div class="info-content">
                 <h3>Star Brand Philippines</h3>

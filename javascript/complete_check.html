@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Complete System Check</title>
+    <style>
+        body { font-family: Arial; padding: 20px; background: #f0f2f5; }
+        .container { max-width: 1000px; margin: 0 auto; background: white; padding: 25px; border-radius: 12px; box-shadow: 0 2px 15px rgba(0,0,0,0.1); }
+        h1 { color: #1a3c6e; border-bottom: 3px solid #1a3c6e; padding-bottom: 10px; }
+        .pass { color: green; font-weight: bold; }
+        .fail { color: red; font-weight: bold; }
+        .info { color: orange; font-weight: bold; }
+        table { width: 100%; border-collapse: collapse; margin-top: 15px; font-size: 13px; }
+        th { background: #1a3c6e; color: white; padding: 10px; text-align: left; }
+        td { padding: 8px 10px; border-bottom: 1px solid #eee; }
+        tr:hover { background: #f5f5f5; }
+        .btn { padding: 10px 25px; margin: 5px; background: #1a3c6e; color: white; border: none; border-radius: 6px; cursor: pointer; font-size: 14px; }
+        .btn:hover { background: #2a5c8e; }
+        .btn-success { background: #28a745; }
+        .btn-success:hover { background: #218838; }
+        .btn-danger { background: #dc3545; }
+        .btn-danger:hover { background: #c82333; }
+        .summary-box { padding: 15px 20px; border-radius: 8px; margin-top: 15px; }
+        .all-good { background: #d4edda; border: 2px solid #28a745; color: #155724; }
+        .has-issues { background: #f8d7da; border: 2px solid #dc3545; color: #721c24; }
+        .partial { background: #fff3cd; border: 2px solid #ffc107; color: #856404; }
+        pre { background: #f4f4f4; padding: 8px; border-radius: 4px; overflow: auto; max-height: 80px; font-size: 11px; margin: 3px 0; }
+        .badge { display: inline-block; padding: 2px 10px; border-radius: 12px; font-size: 11px; font-weight: bold; }
+        .badge-found { background: #28a745; color: white; }
+        .badge-notfound { background: #dc3545; color: white; }
+        .badge-error { background: #ffc107; color: #333; }
+        .status-working { color: green; font-weight: bold; }
+        .status-failed { color: red; font-weight: bold; }
+        .section-title { background: #e9ecef; padding: 8px 15px; border-radius: 6px; margin: 20px 0 10px; font-weight: bold; }
+        .progress-bar { height: 8px; background: #e9ecef; border-radius: 4px; margin: 10px 0; overflow: hidden; }
+        .progress-fill { height: 100%; background: linear-gradient(90deg, #28a745, #20c997); transition: width 0.5s; width: 0%; }
+        .live-status { font-size: 14px; padding: 5px 10px; border-radius: 4px; display: inline-block; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🔍 Complete System Check</h1>
+        <p>Checking ALL files from the <strong>javascript</strong> folder</p>
+        <p><strong>Current Location:</strong> /javascript/</p>
+        
+        <div class="progress-bar">
+            <div id="progressFill" class="progress-fill" style="width: 0%;"></div>
+        </div>
+        
+        <div style="margin: 15px 0;">
+            <button class="btn btn-success" onclick="checkAllFiles()">🚀 Check All Files</button>
+            <button class="btn btn-danger" onclick="clearResults()">🗑️ Clear Results</button>
+        </div>
+        
+        <div id="results"></div>
+        <div id="summary"></div>
+        <div id="recommendations" style="margin-top: 15px;"></div>
+    </div>
+    
+    <script>
+        var allResults = [];
+        var totalChecks = 0;
+        var passedChecks = 0;
+        
+        function checkAllFiles() {
+            document.getElementById('results').innerHTML = '';
+            document.getElementById('summary').innerHTML = '';
+            document.getElementById('recommendations').innerHTML = '';
+            document.getElementById('progressFill').style.width = '0%';
+            allResults = [];
+            totalChecks = 0;
+            passedChecks = 0;
+            
+            var filesToCheck = [
+                // ========== BACKEND FILES ==========
+                { path: '../careerbackend.php', name: 'careerbackend.php (root)', type: 'Backend' },
+                { path: '../backend/careersbackend.php', name: 'backend/careersbackend.php', type: 'Backend' },
+                { path: '../backend/careerbackend.php', name: 'backend/careerbackend.php', type: 'Backend' },
+                
+                // ========== CONFIG FILES ==========
+                { path: '../config/database.php', name: 'config/database.php', type: 'Config' },
+                { path: '../config/mailer.php', name: 'config/mailer.php', type: 'Config' },
+                
+                // ========== PHPMailer FILES ==========
+                { path: '../phpmailer/PHPMailer.php', name: 'phpmailer/PHPMailer.php', type: 'PHPMailer' },
+                { path: '../phpmailer/SMTP.php', name: 'phpmailer/SMTP.php', type: 'PHPMailer' },
+                { path: '../phpmailer/Exception.php', name: 'phpmailer/Exception.php', type: 'PHPMailer' },
+                
+                // ========== CSS FILES ==========
+                { path: '../css/careers.css', name: 'css/careers.css', type: 'CSS' },
+                { path: '../css/client.css', name: 'css/client.css', type: 'CSS' },
+                { path: '../css/contact.css', name: 'css/contact.css', type: 'CSS' },
+                { path: '../css/services.css', name: 'css/services.css', type: 'CSS' },
+                { path: '../css/style.css', name: 'css/style.css', type: 'CSS' },
+                
+                // ========== MAIN PHP FILES ==========
+                { path: '../careers.php', name: 'careers.php', type: 'Main' },
+                { path: '../index.php', name: 'index.php', type: 'Main' },
+                { path: '../dashboard.php', name: 'dashboard.php', type: 'Main' },
+                { path: '../services.php', name: 'services.php', type: 'Main' },
+                { path: '../client.php', name: 'client.php', type: 'Main' },
+                { path: '../contact.php', name: 'contact.php', type: 'Main' },
+                
+                // ========== JAVASCRIPT FILES ==========
+                { path: 'applied.js', name: 'applied.js', type: 'JavaScript' },
+                { path: '../javascript/applied.js', name: 'javascript/applied.js', type: 'JavaScript' },
+                
+                // ========== FOLDERS ==========
+                { path: '../uploads/', name: 'uploads folder', type: 'Folder' },
+                { path: '../images/', name: 'images folder', type: 'Folder' },
+                { path: '../phpmailer/', name: 'phpmailer folder', type: 'Folder' },
+                { path: '../config/', name: 'config folder', type: 'Folder' },
+                { path: '../backend/', name: 'backend folder', type: 'Folder' },
+                { path: '../css/', name: 'css folder', type: 'Folder' }
+            ];
+            
+            totalChecks = filesToCheck.length;
+            
+            var table = document.createElement('table');
+            table.innerHTML = '<tr><th>#</th><th>File/Folder</th><th>Type</th><th>Status</th><th>Response</th></tr>';
+            document.getElementById('results').appendChild(table);
+            
+            filesToCheck.forEach(function(file, index) {
+                var row = document.createElement('tr');
+                row.id = 'row-' + index;
+                row.innerHTML = '<td>' + (index + 1) + '</td><td>' + file.name + '</td><td>' + file.type + '</td><td>⏳ Checking...</td><td>-</td>';
+                table.appendChild(row);
+                
+                fetch(file.path, { method: 'HEAD' })
+                    .then(function(response) {
+                        var isOk = response.ok;
+                        var status = response.status;
+                        var badge = isOk ? '<span class="badge badge-found">FOUND</span>' : '<span class="badge badge-notfound">NOT FOUND</span>';
+                        var statusClass = isOk ? 'status-working' : 'status-failed';
+                        
+                        if (isOk) passedChecks++;
+                        
+                        row.innerHTML = '<td>' + (index + 1) + '</td><td>' + file.name + '</td><td>' + file.type + '</td><td class="' + statusClass + '">' + badge + ' (' + status + ')</td><td>' + (isOk ? '✅ Working' : '❌ Failed') + '</td>';
+                        
+                        allResults.push({
+                            name: file.name,
+                            path: file.path,
+                            type: file.type,
+                            working: isOk,
+                            status: status
+                        });
+                        
+                        updateProgress();
+                        updateSummary();
+                        updateRecommendations();
+                    })
+                    .catch(function(error) {
+                        row.innerHTML = '<td>' + (index + 1) + '</td><td>' + file.name + '</td><td>' + file.type + '</td><td><span class="badge badge-error">ERROR</span></td><td>❌ ' + error.message + '</td>';
+                        
+                        allResults.push({
+                            name: file.name,
+                            path: file.path,
+                            type: file.type,
+                            working: false,
+                            status: 'Error'
+                        });
+                        
+                        updateProgress();
+                        updateSummary();
+                        updateRecommendations();
+                    });
+            });
+        }
+        
+        function updateProgress() {
+            var percent = (passedChecks / totalChecks) * 100;
+            document.getElementById('progressFill').style.width = Math.min(percent, 100) + '%';
+        }
+        
+        function updateSummary() {
+            var summaryDiv = document.getElementById('summary');
+            var total = allResults.length;
+            var working = allResults.filter(function(r) { return r.working === true; }).length;
+            var failed = total - working;
+            
+            if (total === 0) {
+                summaryDiv.innerHTML = '<p>Click "Check All Files" to start...</p>';
+                return;
+            }
+            
+            var statusClass = 'all-good';
+            var statusText = '✅ ALL FILES FOUND!';
+            if (failed > 0 && working > 0) {
+                statusClass = 'partial';
+                statusText = '⚠️ Some files missing (' + failed + ' missing)';
+            } else if (working === 0) {
+                statusClass = 'has-issues';
+                statusText = '❌ NO FILES FOUND!';
+            }
+            
+            var html = '<div class="summary-box ' + statusClass + '">';
+            html += '<h2>' + statusText + '</h2>';
+            html += '<p>Total: ' + total + ' | ✅ Found: ' + working + ' | ❌ Missing: ' + failed + '</p>';
+            html += '</div>';
+            
+            summaryDiv.innerHTML = html;
+        }
+        
+        function updateRecommendations() {
+            var recDiv = document.getElementById('recommendations');
+            
+            // Find working backend paths
+            var backendPaths = allResults.filter(function(r) { 
+                return r.type === 'Backend' && r.working === true; 
+            });
+            
+            // Find working config paths
+            var configPaths = allResults.filter(function(r) { 
+                return r.type === 'Config' && r.working === true; 
+            });
+            
+            // Find working PHPMailer paths
+            var phpmailerPaths = allResults.filter(function(r) { 
+                return r.type === 'PHPMailer' && r.working === true; 
+            });
+            
+            // Find working main files
+            var mainPaths = allResults.filter(function(r) { 
+                return r.type === 'Main' && r.working === true; 
+            });
+            
+            // Find missing files
+            var missing = allResults.filter(function(r) { 
+                return r.working === false; 
+            });
+            
+            var html = '<div style="background: #e8f4fd; padding: 20px; border-radius: 8px; margin-top: 10px;">';
+            html += '<h3>📋 System Status</h3>';
+            
+            // Backend status
+            if (backendPaths.length > 0) {
+                html += '<p><strong>✅ Backend:</strong> Found at <code>' + backendPaths[0].path + '</code></p>';
+                html += '<p>Use this path in <strong>applied.js</strong> fetch(): <code>fetch(\'' + backendPaths[0].path + '\')</code></p>';
+            } else {
+                html += '<p><strong style="color:red;">❌ Backend file NOT found!</strong></p>';
+                html += '<p>Make sure <strong>careerbackend.php</strong> exists in the root folder.</p>';
+            }
+            
+            // Config status
+            if (configPaths.length > 0) {
+                html += '<p><strong>✅ Config:</strong> Found ' + configPaths.length + ' file(s)</p>';
+            } else {
+                html += '<p><strong style="color:red;">❌ Config files NOT found!</strong></p>';
+                html += '<p>Make sure <strong>config/database.php</strong> and <strong>config/mailer.php</strong> exist.</p>';
+            }
+            
+            // PHPMailer status
+            if (phpmailerPaths.length === 3) {
+                html += '<p><strong>✅ PHPMailer:</strong> All 3 files found (PHPMailer.php, SMTP.php, Exception.php)</p>';
+            } else if (phpmailerPaths.length > 0) {
+                html += '<p><strong>⚠️ PHPMailer:</strong> Only ' + phpmailerPaths.length + ' of 3 files found</p>';
+            } else {
+                html += '<p><strong style="color:red;">❌ PHPMailer files NOT found!</strong></p>';
+                html += '<p>Make sure PHPMailer files are in the <strong>phpmailer</strong> folder.</p>';
+            }
+            
+            // Main files
+            html += '<p><strong>Main PHP files:</strong> ' + mainPaths.length + ' of 6 found</p>';
+            
+            // Missing files list
+            if (missing.length > 0) {
+                html += '<div style="background: #f8d7da; padding: 10px; border-radius: 5px; margin-top: 10px;">';
+                html += '<strong style="color:red;">❌ Missing Files:</strong><ul>';
+                missing.forEach(function(m) {
+                    html += '<li style="color:red;">' + m.name + ' - ' + m.path + '</li>';
+                });
+                html += '</ul>';
+                html += '</div>';
+            }
+            
+            // Summary of correct paths
+            html += '<div style="background: #d4edda; padding: 15px; border-radius: 5px; margin-top: 15px;">';
+            html += '<h4 style="margin:0;color:#155724;">✅ Correct Paths</h4>';
+            html += '<p><strong>careers.php</strong> form action: <code>careerbackend.php</code></p>';
+            html += '<p><strong>applied.js</strong> fetch path: <code>../careerbackend.php</code></p>';
+            html += '<p><strong>careerbackend.php</strong> config path: <code>config/database.php</code> and <code>config/mailer.php</code></p>';
+            html += '<p><strong>config/mailer.php</strong> PHPMailer path: <code>../phpmailer/PHPMailer.php</code></p>';
+            html += '</div>';
+            
+            html += '</div>';
+            
+            recDiv.innerHTML = html;
+        }
+        
+        function clearResults() {
+            document.getElementById('results').innerHTML = '<p>Click "Check All Files" to start...</p>';
+            document.getElementById('summary').innerHTML = '';
+            document.getElementById('recommendations').innerHTML = '';
+            document.getElementById('progressFill').style.width = '0%';
+            allResults = [];
+            totalChecks = 0;
+            passedChecks = 0;
+        }
+        
+        // Auto-run on load
+        window.onload = function() {
+            setTimeout(checkAllFiles, 500);
+        };
+    </script>
+</body>
+</html>
