@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MPMPI Dashboard</title>
+    <title>MPMPI About us</title>
     <link rel="stylesheet" href="css/about-us.css">
 </head> 
 <body>
@@ -18,7 +18,7 @@
         <a href="client">Clients</a>
         <a href="careers">Careers</a>
         <a href="contact">Contact</a>
-        <a href="About us">About-us</a>
+        <a href="About us">About us</a>
     </nav>
 </header>
 
