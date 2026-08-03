@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MPMPI Dashboard</title>
-    <link rel="stylesheet" href="css/about us.css">
+    <link rel="stylesheet" href="css/about-us.css">
 </head> 
 <body>
 
@@ -18,7 +18,7 @@
         <a href="client">Clients</a>
         <a href="careers">Careers</a>
         <a href="contact">Contact</a>
-        <a href="About us">About us</a>
+        <a href="About us">About-us</a>
     </nav>
 </header>
 
@@ -101,7 +101,7 @@
 document.addEventListener('DOMContentLoaded', function() {
     // Video file mapping
     const videos = {
-        1: 'videos/(1)DBHD Group Corporate Video.mp4',
+        1: 'videos/(1) DBHD Group Corporate Video.mp4',
         2: 'videos/(2) metro parking Version 2.mp4',
         3: 'videos/(3) JLG Metro Sdn Bhd.mp4'
     };
