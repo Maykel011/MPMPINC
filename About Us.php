@@ -57,9 +57,7 @@
             </div>
         </div>
         <div class="video-thumbnails">
-            <button class="thumb-btn active" data-video="1">DBHD Group</button>
-            <button class="thumb-btn" data-video="2">Metro Parking v2</button>
-            <button class="thumb-btn" data-video="3">JLG Metro</button>
+            <button class="thumb-btn active" data-video="3">JLG METRO PARKING MANAGEMENT PHILIPPINES INC.</button>
         </div>
     </div>
     <!-- ============================================= -->
@@ -99,25 +97,17 @@
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-    // Video file mapping
+    // Video file mapping - only JLG Metro video
     const videos = {
-        1: 'videos/(1) DBHD Group Corporate Video.mp4',
-        2: 'videos/(2) metro parking Version 2.mp4',
-        3: 'videos/(3) JLG Metro Sdn Bhd.mp4'
+        3: 'videos/' + encodeURIComponent('(3) JLG Metro Sdn Bhd.mp4')
     };
 
     const video = document.getElementById('corporateVideo');
     const videoSource = document.getElementById('videoSource');
     const thumbBtns = document.querySelectorAll('.thumb-btn');
     
-    // Get current video index from sessionStorage or default to random
-    let currentIndex = parseInt(sessionStorage.getItem('currentVideoIndex')) || 0;
-    
-    // If no stored index, generate random
-    if (!sessionStorage.getItem('currentVideoIndex')) {
-        currentIndex = Math.floor(Math.random() * 3) + 1;
-        sessionStorage.setItem('currentVideoIndex', currentIndex);
-    }
+    // Always use video 3
+    let currentIndex = 3;
 
     // Load the video
     function loadVideo(index) {
@@ -142,19 +132,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    // Play next video when current ends
-    video.addEventListener('ended', function() {
-        let nextIndex = currentIndex + 1;
-        if (nextIndex > 3) {
-            nextIndex = 1;
-        }
-        currentIndex = nextIndex;
-        sessionStorage.setItem('currentVideoIndex', currentIndex);
-        loadVideo(currentIndex);
-        video.play().catch(e => console.log('Autoplay prevented'));
-    });
-
-    // Click handler for thumbnail buttons - switches video without page refresh
+    // Click handler for thumbnail button
     thumbBtns.forEach(btn => {
         btn.addEventListener('click', function(e) {
             e.preventDefault();
@@ -162,7 +140,6 @@ document.addEventListener('DOMContentLoaded', function() {
             
             if (index !== currentIndex) {
                 currentIndex = index;
-                sessionStorage.setItem('currentVideoIndex', currentIndex);
                 loadVideo(currentIndex);
                 
                 // Play the video after switching
@@ -181,6 +158,21 @@ document.addEventListener('DOMContentLoaded', function() {
     // Try to play after load
     video.addEventListener('loadeddata', function() {
         video.play().catch(e => console.log('Autoplay prevented'));
+    });
+
+    // Error handling - if video fails to load, try without encoding
+    video.addEventListener('error', function(e) {
+        console.log('Video load error, trying unencoded path...');
+        // Fallback: try without encoding
+        const fallbackVideos = {
+            3: 'videos/(3) JLG Metro Sdn Bhd.mp4'
+        };
+        
+        const fallbackPath = fallbackVideos[currentIndex];
+        if (fallbackPath) {
+            videoSource.src = fallbackPath;
+            video.load();
+        }
     });
 });
 </script>
