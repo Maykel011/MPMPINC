@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="css/Services123.css">
     
     <!-- SERVICES JAVASCRIPT -->
-    <script src="javascript/Services-awards.js" defer></script>
+    <script src="javascript/Services-award.js" defer></script>
 </head>
 <body>
 
@@ -111,10 +111,8 @@
     <div class="info-box" style="background-image: url('images/awards/NATIONAL PRODUCT EXCELLENCE.png');" onclick="openModal(0)">
         <div class="info-overlay">
             <div class="info-content">
-                <h3>Best Car Park 2005</h3>
-                <p>
-                    Awarded by National Product Quality Excellence and Seal of Product Quality on September 21, 2005.
-                </p>
+                <h3>Best Car Park</h3>
+               
                 <span class="view-details">Click to view details →</span>
             </div>
         </div>
@@ -126,9 +124,7 @@
         <div class="info-overlay">
             <div class="info-content">
                 <h3>Most Outstanding Innovative Car Park</h3>
-                <p>
-                    Awarded by Philippine Marketing Excellence Awards Institute, Inc. and partner organizations in 2005.
-                </p>
+              
                 <span class="view-details">Click to view details →</span>
             </div>
         </div>
@@ -139,9 +135,7 @@
         <div class="info-overlay">
             <div class="info-content">
                 <h3>Most Admired Companies and Brands</h3>
-                <p>
-                    Metro Parking MGMT (Phils.) Inc. By the McCallum and Trout Global Associates La Veco Business Consulting Philippines Best Research Council and the Prosaver e-Philippines Marketing.
-                </p>
+              
                 <span class="view-details">Click to view details →</span>
             </div>
         </div>
@@ -154,9 +148,7 @@
         <div class="info-overlay">
             <div class="info-content">
                 <h3>Star Brand Philippines</h3>
-                <p>
-                    Recognized for excellence in brand leadership and market innovation.
-                </p>
+               
                 <span class="view-details">Click to view details →</span>
             </div>
         </div>
@@ -190,13 +182,7 @@
             <div class="modal-text">
                 <h2 id="modalTitle"></h2>
                 <p id="modalDescription"></p>
-                <div class="modal-counter" id="modalCounter"></div>
             </div>
-        </div>
-        
-        <div class="modal-nav">
-            <button class="nav-btn prev-btn" onclick="prevAward()">← Previous</button>
-            <button class="nav-btn next-btn" onclick="nextAward()">Next →</button>
         </div>
     </div>
 </div>

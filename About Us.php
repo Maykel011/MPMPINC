@@ -42,7 +42,7 @@
         MPMPI was set with the initial paid-up capital of USD <b>200,000.00</b>. The parent
         company, <b>JLG METRO SDN BHD</b>, with 50 man-years of experience, was incorporated
         in <b>1991</b> under the umbrella of <b>JLG Integra Sdn Bhd (A JCorp Company)</b>. It became a market leader in 
-        Malaysia and Singapore within two years of operation and is now an established leader in both countries.
+        Malaysia (Metro Parking (M) Sdn Bhd) and Singapore (Metro Parking (S) Pte Ltd) within two years of operation and is now an established leader in both countries.
     </p>
 
     <!-- ========== CORPORATE VIDEO SECTION ========== -->

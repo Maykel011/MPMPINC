@@ -43,18 +43,6 @@ function closeModal() {
     document.body.style.overflow = 'auto';
 }
 
-// Navigate to next award
-function nextAward() {
-    currentIndex = (currentIndex + 1) % awards.length;
-    updateModal();
-}
-
-// Navigate to previous award
-function prevAward() {
-    currentIndex = (currentIndex - 1 + awards.length) % awards.length;
-    updateModal();
-}
-
 // Update modal content with current award
 function updateModal() {
     const award = awards[currentIndex];
@@ -62,7 +50,6 @@ function updateModal() {
     document.getElementById('modalImage').alt = award.title;
     document.getElementById('modalTitle').textContent = award.title;
     document.getElementById('modalDescription').textContent = award.description;
-    document.getElementById('modalCounter').textContent = `${currentIndex + 1} of ${awards.length}`;
 }
 
 // Close modal when clicking outside
@@ -70,51 +57,6 @@ window.onclick = function(event) {
     const modal = document.getElementById('awardModal');
     if (event.target === modal) {
         closeModal();
-    }
-}
-
-// Keyboard navigation
-document.addEventListener('keydown', function(event) {
-    if (document.getElementById('awardModal').style.display === 'flex') {
-        if (event.key === 'ArrowRight') {
-            nextAward();
-        } else if (event.key === 'ArrowLeft') {
-            prevAward();
-        } else if (event.key === 'Escape') {
-            closeModal();
-        }
-    }
-});
-
-// Touch swipe support for mobile
-let touchStartX = 0;
-let touchEndX = 0;
-
-document.addEventListener('touchstart', function(event) {
-    const modal = document.getElementById('awardModal');
-    if (modal.style.display === 'flex') {
-        touchStartX = event.changedTouches[0].screenX;
-    }
-});
-
-document.addEventListener('touchend', function(event) {
-    const modal = document.getElementById('awardModal');
-    if (modal.style.display === 'flex') {
-        touchEndX = event.changedTouches[0].screenX;
-        handleSwipe();
-    }
-});
-
-function handleSwipe() {
-    const swipeThreshold = 50;
-    const diff = touchStartX - touchEndX;
-    
-    if (Math.abs(diff) > swipeThreshold) {
-        if (diff > 0) {
-            nextAward(); // Swipe left
-        } else {
-            prevAward(); // Swipe right
-        }
     }
 }
 
