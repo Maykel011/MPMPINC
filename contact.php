@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us - MPMPI</title>
 
-    <link rel="stylesheet" href="css/contact.css">
-    
+    <link rel="stylesheet" href="css/contacts.css">
+    <script src="javascript/contact.js" defer></script>
 </head>
 <body>
 
@@ -131,9 +130,8 @@
 </section>
 
 <footer>
-    &copy; <?php echo date('1998'); ?> MPMPI. All Rights Reserved.
+    &copy; <?php echo date('2026'); ?> MPMPI. All Rights Reserved.
 </footer>
 
 </body>
 </html>
-

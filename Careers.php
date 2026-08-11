@@ -15,7 +15,8 @@ if (isset($_SESSION['application_success']) && $_SESSION['application_success'])
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Careers - MPMPI</title>
-    <link rel="stylesheet" href="css/careers1.css">
+    <link rel="stylesheet" href="css/careers.css">
+    <script src="javascript/careers.js" defer></script>
 </head>
 <body>
 
@@ -28,7 +29,7 @@ if (isset($_SESSION['application_success']) && $_SESSION['application_success'])
         <a href="client.php">Clients</a>
         <a href="careers.php">Careers</a>
         <a href="contact.php">Contact</a>
-        <a href="About us.php">About us</a>
+        <a href="About us">About us</a>
     </nav>
 </header>
 
@@ -248,7 +249,7 @@ if (isset($_SESSION['application_success']) && $_SESSION['application_success'])
 </div>
 
 <footer>
-    &copy; <?php echo date('1998'); ?> MPMPI. All Rights Reserved.
+    &copy; <?php echo date('2026'); ?> MPMPI. All Rights Reserved.
 </footer>
 
 <script src="javascript/applied.js"></script>

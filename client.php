@@ -4,14 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Our Clients - MPMPI</title>
-
-    <link rel="stylesheet" href="css/client.css">
+    <link rel="stylesheet" href="css/Clients.css">
+    <script src="javascript/client.js" defer></script>
 </head>
 <body>
 
 <!-- HEADER -->
 <header>
-
     <div class="logo">
         <img src="images/mpmpi.png" alt="MPMPI Logo">
     </div>
@@ -23,110 +22,85 @@
         <a href="contact">Contact</a>
         <a href="About us">About us</a>
     </nav>
-
 </header>
 
-
-
 <!-- INTRO -->
-
 <section class="section">
-
     <h2>Our Clients</h2>
-
     <p>
         Metro Parking Management (Phils.) Inc. is proud to have partnered with
         numerous commercial establishments, residential developments,
         hotels, office buildings, and mixed-use developments across the Philippines.
         Our commitment to professional parking management has earned the trust of our valued clients.
     </p>
-
 </section>
 
-
-    <!-- CONTENT -->
-
-    <div class="client-content">
-
-        <section class="section">
-
-            <!-- OFFICE -->
-
-            <div class="client-category" >
-
-                <div class="client-grid office-grid">
-
-                    <div class="client-card">
-    <img src="images/clients/eton.png" class="eton-logo" alt="">
-</div>
-                    <div class="client-card"><img src="images/clients/federalland.png" alt=""></div>
-                    <div class="client-card"><img src="images/clients/regiscenters.png" alt=""></div>
-                    <div class="client-card">
-    <img src="images/clients/ecoplaza.png" class="ecoplaza-logo" alt="Ecoplaza">
-</div>
-
+<!-- CONTENT -->
+<div class="client-content">
+    <section class="section">
+        <!-- OFFICE -->
+        <div class="client-category">
+            <div class="client-grid office-grid">
+                <div class="client-card">
+                    <img src="images/clients/eton.png" class="eton-logo" alt="">
                 </div>
-
+                <div class="client-card">
+                    <img src="images/clients/federalland.png" alt="">
+                </div>
+                <div class="client-card">
+                    <img src="images/clients/regiscenters.png" alt="">
+                </div>
+                <div class="client-card">
+                    <img src="images/clients/ecoplaza.png" class="ecoplaza-logo" alt="Ecoplaza">
+                </div>
             </div>
-
-            <!-- HOTEL -->
-
-            <div class="client-category">
-
-                <div class="client-grid hotel-grid">
-                    <div class="client-card"><img src="images/clients/shangri.png" alt=""></div>
-                    <div class="client-card">
-    <img src="images/clients/peninsula.png" class="peninsula-logo" alt="">
-</div>
-
- <div class="client-card">
-            <img src="images/clients/jnhsm.png" class="jnhsm-logo" alt="Joy~Nostalg Hotel & Suites Manila">
         </div>
 
+        <!-- HOTEL -->
+        <div class="client-category">
+            <div class="client-grid hotel-grid">
+                <div class="client-card">
+                    <img src="images/clients/shangri.png" alt="">
                 </div>
-
-            </div>
-
-            <!-- OPEN SITE -->
-
-            <div class="client-category">
-
-                <div class="client-grid opensite-grid">
-                    <div class="client-card"><img src="images/clients/cmci-logo.png" alt=""></div>
-                    <div class="client-card"><img src="images/clients/seascape.png" alt=""></div>
-                    <div class="client-card"><img src="images/clients/homedepot.png" alt=""></div>
-                    <div class="client-card"><img src="images/clients/robinsonland.png" alt=""></div>
-                    <div class="client-card"><img src="images/clients/southsupermarket.png" alt=""></div>
-                    <div class="client-card"><img src="images/clients/federalland.png" alt=""></div>
-                    <div class="client-card"><img src="images/clients/ictsi.png" alt=""></div>
-                    <div class="client-card"><img src="images/clients/mbp.png" alt=""></div>
-                    <div class="client-card"><img src="images/clients/pbcom.png" alt=""></div>
-                    
+                <div class="client-card">
+                    <img src="images/clients/peninsula.png" class="peninsula-logo" alt="">
                 </div>
-
+                <div class="client-card">
+                    <img src="images/clients/jnhsm.png" class="jnhsm-logo" alt="Joy~Nostalg Hotel & Suites Manila">
+                </div>
             </div>
+        </div>
 
-            <!-- PROVINCE -->
+        <!-- OPEN SITE -->
+        <div class="client-category">
+            <div class="client-grid opensite-grid">
+                <div class="client-card"><img src="images/clients/cmci-logo.png" alt=""></div>
+                <div class="client-card"><img src="images/clients/seascape.png" alt=""></div>
+                <div class="client-card"><img src="images/clients/homedepot.png" alt=""></div>
+                <div class="client-card"><img src="images/clients/robinsonland.png" alt=""></div>
+                <div class="client-card"><img src="images/clients/southsupermarket.png" alt=""></div>
+                <div class="client-card"><img src="images/clients/federalland.png" alt=""></div>
+                <div class="client-card"><img src="images/clients/ictsi.png" alt=""></div>
+                <div class="client-card"><img src="images/clients/mbp.png" alt=""></div>
+                <div class="client-card"><img src="images/clients/pbcom.png" alt=""></div>
+            </div>
+        </div>
 
-            <div class="client-category">
-                <div class="client-grid province-grid">
-
-                    <div class="client-card"><img src="images/clients/tm.png" alt=""></div>
-                    <div class="client-card"><img src="images/clients/banilad.png" alt=""></div>
-                    <div class="client-card">
-    <img src="images/clients/streetscape.png" class="streetscape-logo" alt="">
+        <!-- PROVINCE -->
+        <div class="client-category">
+            <div class="client-grid province-grid">
+                <div class="client-card"><img src="images/clients/tm.png" alt=""></div>
+                <div class="client-card"><img src="images/clients/banilad.png" alt=""></div>
+                <div class="client-card">
+                    <img src="images/clients/streetscape.png" class="streetscape-logo" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
 </div>
 
-                </div>
-
-            </div>
-
-        </section>
-
 <footer>
-
-    &copy; <?php echo date("1998"); ?> MPMPI. All Rights Reserved.
-
+   &copy; <?php echo date('2026'); ?> MPMPI. All Rights Reserved.
 </footer>
 
 </body>

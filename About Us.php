@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MPMPI About us</title>
-    <link rel="stylesheet" href="css/about-us.css">
+    <link rel="stylesheet" href="css/About-us.css">
+    <script src="javascript/about-us.js" defer></script>
 </head> 
 <body>
 
@@ -42,23 +43,29 @@
         MPMPI was set with the initial paid-up capital of USD <b>200,000.00</b>. The parent
         company, <b>JLG METRO SDN BHD</b>, with 50 man-years of experience, was incorporated
         in <b>1991</b> under the umbrella of <b>JLG Integra Sdn Bhd (A JCorp Company)</b>. It became a market leader in 
-        Malaysia (Metro Parking (M) Sdn Bhd) and Singapore (Metro Parking (S) Pte Ltd) within two years of operation and is now an established leader in both countries.
+        Malaysia <B>(Metro Parking (M) Sdn Bhd)</B> and Singapore <B>(Metro Parking (S) Pte Ltd)</B> within two years of operation and is now an established leader in both countries.
     </p>
 
     <!-- ========== CORPORATE VIDEO SECTION ========== -->
     <div class="corporate-video">
-        <h3>Corporate Videos</h3>
+        <h3>Corporate Video</h3>
         <div class="video-wrapper">
             <div class="video-container">
-                <video id="corporateVideo" controls autoplay muted playsinline>
-                    <source id="videoSource" src="" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
+                <iframe 
+                    id="corporateVideo"
+                    width="100%" 
+                    height="100%" 
+                    src="https://www.youtube.com/embed/KZuy5rTl_L4?autoplay=1&mute=1&rel=0&modestbranding=1&showinfo=0&controls=1&iv_load_policy=3&cc_load_policy=0"
+                    title="JLG Metro Parking Management Philippines Inc."
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+                </iframe>
             </div>
         </div>
-        <div class="video-thumbnails">
-            <button class="thumb-btn active" data-video="3">JLG METRO PARKING MANAGEMENT PHILIPPINES INC.</button>
-        </div>
+      <!--  <div class="video-thumbnails">
+            <span class="thumb-label active" data-video="3">JLG METRO PARKING</span>
+        </div> -->
     </div>
     <!-- ============================================= -->
 
@@ -92,90 +99,8 @@
 </main>
  
 <footer>
-    &copy; <?php echo date('1998'); ?> MPMPI. All Rights Reserved.
+     &copy; <?php echo date('2026'); ?> MPMPI. All Rights Reserved.
 </footer>
-
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    // Video file mapping - only JLG Metro video
-    const videos = {
-        3: 'videos/' + encodeURIComponent('(3) JLG Metro Sdn Bhd.mp4')
-    };
-
-    const video = document.getElementById('corporateVideo');
-    const videoSource = document.getElementById('videoSource');
-    const thumbBtns = document.querySelectorAll('.thumb-btn');
-    
-    // Always use video 3
-    let currentIndex = 3;
-
-    // Load the video
-    function loadVideo(index) {
-        const videoPath = videos[index];
-        if (videoPath) {
-            // Update video source
-            videoSource.src = videoPath;
-            video.load();
-            
-            // Update active button
-            thumbBtns.forEach(btn => {
-                btn.classList.remove('active');
-                if (parseInt(btn.dataset.video) === index) {
-                    btn.classList.add('active');
-                }
-            });
-            
-            // Reset video to maintain container size
-            video.style.width = '100%';
-            video.style.height = '100%';
-            video.style.objectFit = 'contain';
-        }
-    }
-
-    // Click handler for thumbnail button
-    thumbBtns.forEach(btn => {
-        btn.addEventListener('click', function(e) {
-            e.preventDefault();
-            const index = parseInt(this.dataset.video);
-            
-            if (index !== currentIndex) {
-                currentIndex = index;
-                loadVideo(currentIndex);
-                
-                // Play the video after switching
-                setTimeout(() => {
-                    video.play().catch(e => {
-                        console.log('Autoplay prevented, waiting for user interaction');
-                    });
-                }, 100);
-            }
-        });
-    });
-
-    // Initial load
-    loadVideo(currentIndex);
-    
-    // Try to play after load
-    video.addEventListener('loadeddata', function() {
-        video.play().catch(e => console.log('Autoplay prevented'));
-    });
-
-    // Error handling - if video fails to load, try without encoding
-    video.addEventListener('error', function(e) {
-        console.log('Video load error, trying unencoded path...');
-        // Fallback: try without encoding
-        const fallbackVideos = {
-            3: 'videos/(3) JLG Metro Sdn Bhd.mp4'
-        };
-        
-        const fallbackPath = fallbackVideos[currentIndex];
-        if (fallbackPath) {
-            videoSource.src = fallbackPath;
-            video.load();
-        }
-    });
-});
-</script>
 
 </body>
 </html>

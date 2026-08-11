@@ -6,7 +6,7 @@
     <title>Services - MPMPI</title>
 
     <!-- SERVICES ONLY CSS -->
-    <link rel="stylesheet" href="css/Services123.css">
+    <link rel="stylesheet" href="css/ServicesMPMPI.css">
     
     <!-- SERVICES JAVASCRIPT -->
     <script src="javascript/Services-award.js" defer></script>
@@ -72,13 +72,13 @@
 
                 The classic perception of being an industry leader is often measured by the numbers. The higher the figures a company achieves, the more successful, competitive, and influential it is perceived to be. However, another important measure of a company's leadership is the level of satisfaction it provides to its customers.
 
-				This is where Metro Parking Management Philippines, Inc. (MPMPI) affirms its leadership. It is the primary reason we established Metro Parking in the Philippines to provide an exceptional parking experience and deliver above-par quality service to our clients.
+                This is where Metro Parking Management Philippines, Inc. (MPMPI) affirms its leadership. It is the primary reason we established Metro Parking in the Philippines to provide an exceptional parking experience and deliver above-par quality service to our clients.
                     
-				MPMPI takes pride in being the country's first ISO-certified company in the parking industry, demonstrating our commitment to excellence, quality, and customer satisfaction.
+                MPMPI takes pride in being the country's first ISO-certified company in the parking industry, demonstrating our commitment to excellence, quality, and customer satisfaction.
 </br>
             </p> 
        
-       		  <P>
+            <P>
                 MPMPI's pursuit of excellence reached a significant milestone after six months of dedicated planning, preparation, and commitment to quality. 
     
                 These efforts culminated in the successful attainment of the <b>ISO 9001:2000 Certification for the Management of Car Parks</b>, awarded by TUV Philippines.
@@ -159,9 +159,7 @@
         <div class="info-overlay">
             <div class="info-content">
                 <h3>Asian Star Brand</h3>
-                <p>
-                    Honored as a leading brand in the Asian market for quality and service excellence.
-                </p>
+                
                 <span class="view-details">Click to view details →</span>
             </div>
         </div>
@@ -189,7 +187,7 @@
 
 <!-- FOOTER -->
 <footer>
-    &copy; <?php echo date('1998'); ?> MPMPI. All Rights Reserved.
+    &copy; <?php echo date('2026'); ?> MPMPI. All Rights Reserved.
 </footer>
 
 </body>

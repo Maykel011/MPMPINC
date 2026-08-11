@@ -211,11 +211,10 @@ nav a:hover::after {
     justify-content: center;
 }
 
-.video-container video {
+.video-container iframe {
     width: 100%;
     height: 100%;
-    object-fit: contain;
-    background: #000;
+    border: none;
     display: block;
 }
 
@@ -235,7 +234,10 @@ nav a:hover::after {
     }
 }
 
-/* THUMBNAIL BUTTONS */
+/* ========================================
+   THUMBNAIL LABELS - EXACT BUTTON DESIGN
+   ======================================== */
+
 .video-thumbnails {
     display: flex;
     gap: 15px;
@@ -244,7 +246,8 @@ nav a:hover::after {
     margin-top: 20px;
 }
 
-.thumb-btn {
+/* EXACTLY THE SAME AS ORIGINAL BUTTON DESIGN */
+.thumb-label {
     padding: 10px 25px;
     background: #e8f5e8;
     border: 2px solid #43B143;
@@ -252,29 +255,32 @@ nav a:hover::after {
     color: #2f8f2f;
     font-weight: 600;
     font-size: 14px;
-    cursor: pointer;
     transition: all 0.3s ease;
     user-select: none;
     transform: none !important;
     -webkit-tap-highlight-color: transparent;
     min-width: 120px;
+    display: inline-block;
+    text-align: center;
+    font-family: inherit;
+    line-height: normal;
 }
 
-.thumb-btn:hover {
+/* HOVER STATE - SAME AS BUTTON */
+.thumb-label:hover {
     background: #43B143;
     color: white;
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(67,177,67,0.3);
 }
 
-.thumb-btn.active {
+/* ACTIVE STATE - SAME AS BUTTON */
+.thumb-label.active {
     background: #43B143;
     color: white;
     border-color: #2f8f2f;
     box-shadow: 0 4px 12px rgba(67,177,67,0.3);
 }
-
-/* No :active pseudo-class to prevent shrinking */
 
 /* ========================================
    MISSION & VISION
@@ -354,7 +360,8 @@ nav a:hover::after {
         gap: 10px;
     }
 
-    .thumb-btn {
+    /* MOBILE STYLES - SAME AS BUTTON */
+    .thumb-label {
         padding: 8px 16px;
         font-size: 12px;
         min-width: 90px;
@@ -402,4 +409,105 @@ footer {
         margin: 20px;
         padding: 25px;
     }
+}
+
+/* ============================================
+   SILENT PROTECTION - FULL PROTECTION
+   ============================================ */
+
+/* Prevent ALL selection */
+* {
+    -webkit-user-select: none !important;
+    -moz-user-select: none !important;
+    -ms-user-select: none !important;
+    user-select: none !important;
+    -webkit-touch-callout: none !important;
+    -webkit-tap-highlight-color: transparent !important;
+}
+
+/* Prevent image selection and dragging */
+img {
+    -webkit-user-drag: none !important;
+    user-drag: none !important;
+    -webkit-user-select: none !important;
+    user-select: none !important;
+    -moz-user-select: none !important;
+    -ms-user-select: none !important;
+    pointer-events: none !important;
+}
+
+/* Prevent text selection on body */
+body {
+    -webkit-user-select: none !important;
+    user-select: none !important;
+    -moz-user-select: none !important;
+    -ms-user-select: none !important;
+}
+
+/* Disable text selection in ALL text elements */
+p, h1, h2, h3, h4, h5, h6, span, div, label, button, a, li, ul, ol, strong, em, b, i {
+    -webkit-user-select: none !important;
+    -moz-user-select: none !important;
+    -ms-user-select: none !important;
+    user-select: none !important;
+    cursor: default !important;
+}
+
+/* Make selection completely invisible */
+::selection {
+    background: transparent !important;
+    color: inherit !important;
+}
+
+::-moz-selection {
+    background: transparent !important;
+    color: inherit !important;
+}
+
+::-webkit-selection {
+    background: transparent !important;
+    color: inherit !important;
+}
+
+/* ============================================
+   SILENT PRINT BLOCKING - NO MESSAGES
+   ============================================ */
+
+/* Hide everything when printing - SILENT */
+@media print {
+    body * {
+        display: none !important;
+        visibility: hidden !important;
+    }
+    
+    html, body {
+        background: white !important;
+        height: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+    
+    body::before {
+        display: none !important;
+    }
+}
+
+/* Remove any warning message styling */
+.screenshot-warning {
+    display: none !important;
+}
+
+/* Prevent text highlighting on hover */
+* {
+    -webkit-user-select: none !important;
+    -moz-user-select: none !important;
+    -ms-user-select: none !important;
+    user-select: none !important;
+}
+
+/* Prevent iframe from being selected */
+iframe {
+    pointer-events: auto !important;
+    -webkit-user-select: none !important;
+    user-select: none !important;
 }
