@@ -5,15 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Services - MPMPI</title>
 
-    <!-- SERVICES ONLY CSS -->
+
     <link rel="stylesheet" href="css/ServicesMPMPI.css">
     
-    <!-- SERVICES JAVASCRIPT -->
+
     <script src="javascript/Services-award.js" defer></script>
 </head>
 <body>
 
-<!-- HEADER --> 
 <header>
     <div class="logo">
         <img src="images/mpmpi.png" alt="MPMPI Logo">
@@ -28,7 +27,7 @@
     </nav>
 </header>
 
-<!-- SERVICES -->
+
 <section class="section">
 
     <h2>Our Services</h2>
@@ -168,7 +167,7 @@
 
 </section>
 
-<!-- MODAL -->
+
 <div id="awardModal" class="modal">
     <div class="modal-content">
         <span class="close" onclick="closeModal()">&times;</span>
@@ -185,7 +184,7 @@
     </div>
 </div>
 
-<!-- FOOTER -->
+
 <footer>
     &copy; <?php echo date('2026'); ?> MPMPI. All Rights Reserved.
 </footer>

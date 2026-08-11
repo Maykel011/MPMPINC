@@ -9,7 +9,7 @@
 </head>
 <body>
 
-<!-- HEADER -->
+
 <header>
     <div class="logo">
         <img src="images/mpmpi.png" alt="MPMPI Logo">
@@ -24,7 +24,7 @@
     </nav>
 </header>
 
-<!-- INTRO -->
+
 <section class="section">
     <h2>Our Clients</h2>
     <p>
