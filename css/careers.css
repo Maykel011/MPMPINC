@@ -5,15 +5,27 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
+/* ==================================================
+   BODY - MODERN & DYNAMIC
+================================================== */
+
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    color: #333;
-    line-height: 1.6;
+    font-family: 'Segoe UI', Arial, Helvetica, sans-serif;
+    color: #1a2a1a;
+    line-height: 1.7;
     margin: 0;
     padding-top: 100px;
     background: #f5f5f5;
+    position: relative;
+    overflow-x: hidden;
+    min-height: 100vh;
 }
 
+/* ORIGINAL BACKGROUND IMAGE - RESTORED */
 body::before {
     content: "";
     position: fixed;
@@ -25,6 +37,22 @@ body::before {
     pointer-events: none;
 }
 
+/* ADDITIONAL OVERLAY FOR DEPTH */
+body::after {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background: 
+        radial-gradient(circle at 20% 50%, rgba(67, 177, 67, 0.03) 0%, transparent 50%),
+        radial-gradient(circle at 80% 50%, rgba(67, 177, 67, 0.03) 0%, transparent 50%);
+    z-index: -1;
+    pointer-events: none;
+}
+
+/* ==================================================
+   HEADER - GLASS MORPHISM
+================================================== */
+
 header {
     position: fixed;
     top: 0;
@@ -32,21 +60,40 @@ header {
     width: 100%;
     z-index: 1000;
     height: 90px;
-    background: linear-gradient(to bottom, #79C679, #43B143);
+    background: rgba(67, 177, 67, 0.92);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
     padding: 0 50px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    box-shadow: 0 2px 15px rgba(0,0,0,0.15);
+    box-shadow: 0 4px 30px rgba(67, 177, 67, 0.25);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+}
+
+header:hover {
+    background: rgba(67, 177, 67, 0.96);
+    box-shadow: 0 4px 40px rgba(67, 177, 67, 0.35);
 }
 
 .logo img {
     height: 70px;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+    transition: transform 0.3s ease;
 }
+
+.logo img:hover {
+    transform: scale(1.05);
+}
+
+/* ==================================================
+   NAVIGATION - ENHANCED
+================================================== */
 
 nav {
     display: flex;
-    gap: 25px;
+    gap: 30px;
     align-items: center;
 }
 
@@ -55,7 +102,10 @@ nav a {
     text-decoration: none;
     font-weight: 600;
     font-size: 15px;
+    letter-spacing: 0.5px;
     position: relative;
+    padding: 5px 0;
+    transition: all 0.3s ease;
 }
 
 nav a::after {
@@ -64,30 +114,43 @@ nav a::after {
     left: 0;
     bottom: -3px;
     width: 0;
-    height: 2px;
-    background: #fff;
-    transition: 0.3s;
+    height: 3px;
+    background: linear-gradient(to right, #ffffff, #c8e6c9);
+    border-radius: 2px;
+    transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 nav a:hover::after {
     width: 100%;
 }
 
+nav a:hover {
+    transform: translateY(-2px);
+    text-shadow: 0 2px 10px rgba(255, 255, 255, 0.3);
+}
+
+/* ==================================================
+   SUCCESS BANNER - MODERN
+================================================== */
+
 .success-banner {
     max-width: 1200px;
     margin: 20px auto;
-    padding: 15px 20px;
-    background: #d4edda;
-    border: 1px solid #c3e6cb;
-    border-radius: 10px;
+    padding: 18px 25px;
+    background: rgba(212, 237, 218, 0.92);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 2px solid #c3e6cb;
+    border-radius: 12px;
     color: #155724;
     text-align: center;
     font-size: 16px;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 10px;
+    gap: 12px;
     position: relative;
+    box-shadow: 0 4px 20px rgba(40, 167, 69, 0.15);
 }
 
 .success-close {
@@ -95,27 +158,73 @@ nav a:hover::after {
     right: 15px;
     background: none;
     border: none;
-    font-size: 24px;
+    font-size: 28px;
     cursor: pointer;
     color: #155724;
+    transition: 0.3s ease;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+
+.success-close:hover {
+    background: rgba(21, 87, 36, 0.1);
+    transform: rotate(90deg);
+}
+
+/* ==================================================
+   SECTION - ELEVATED CARDS
+================================================== */
 
 .section {
     max-width: 1200px;
     margin: 25px auto;
     padding: 50px;
-    background: #fff;
-    border-radius: 15px;
-    box-shadow: 0 5px 25px rgba(0,0,0,0.08);
+    background: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 24px;
+    box-shadow: 
+        0 10px 40px rgba(0, 0, 0, 0.06),
+        0 2px 10px rgba(67, 177, 67, 0.08),
+        inset 0 1px 0 rgba(255, 255, 255, 0.6);
     border-top: 6px solid #43B143;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
 }
 
+
+
+
+
+/* SECTION HEADINGS WITH SPARKLE ANIMATION */
 .section h2 {
-    font-size: 34px;
-    color: #2f8f2f;
+    font-size: 38px;
+    color: #1a4a1a;
     margin-bottom: 25px;
     position: relative;
-    padding-bottom: 15px;
+    padding-bottom: 18px;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+}
+
+/* SPARKLE STAR ANIMATION */
+.section h2::before {
+    content: '✦';
+    color: #43B143;
+    margin-right: 12px;
+    font-size: 32px;
+    display: inline-block;
+    animation: sparkle 2s ease-in-out infinite;
+}
+
+@keyframes sparkle {
+    0%, 100% { opacity: 1; transform: scale(1) rotate(0deg); }
+    50% { opacity: 0.5; transform: scale(1.2) rotate(180deg); }
 }
 
 .section h2::after {
@@ -123,44 +232,56 @@ nav a:hover::after {
     position: absolute;
     left: 0;
     bottom: 0;
-    width: 80px;
-    height: 4px;
-    background: linear-gradient(to right, #43B143, #79C679);
+    width: 90px;
+    height: 5px;
+    background: linear-gradient(to right, #43B143, #79C679, #a8d5a8);
+    border-radius: 3px;
 }
 
 .section p {
     font-size: 17px;
-    line-height: 1.9;
-    color: #222;
-    text-align: justify;
+    line-height: 2;
+    color: #1e2a1e;
+    text-align: left;
     margin-bottom: 20px;
 }
 
+.section p b {
+    color: #2f8f2f;
+    font-weight: 700;
+}
+
+/* ==================================================
+   INFO BOX - ENHANCED
+================================================== */
+
 .info-box {
-    background: #f8fff8;
+    background: rgba(248, 255, 248, 0.85);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
     border-left: 5px solid #43B143;
-    padding: 30px;
-    border-radius: 10px;
-    transition: 0.3s;
+    padding: 30px 35px;
+    border-radius: 12px;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 15px rgba(67, 177, 67, 0.05);
 }
 
 .info-box:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(67, 177, 67, 0.15);
+    transform: translateY(-6px);
+    box-shadow: 0 15px 35px rgba(67, 177, 67, 0.12);
+    background: rgba(255, 255, 255, 0.95);
 }
 
 .info-box h3 {
-    color: #2f8f2f;
-    margin-bottom: 10px;
+    color: #1a4a1a;
+    margin-bottom: 12px;
+    font-size: 22px;
+    font-weight: 700;
 }
 
-footer {
-    background: #2f8f2f;
-    color: white;
-    text-align: center;
-    padding: 20px;
-    margin-top: 50px;
-}
+/* ==================================================
+   CAREER INFO GRID
+================================================== */
 
 .career-info {
     display: grid;
@@ -168,6 +289,10 @@ footer {
     gap: 25px;
     margin-top: 30px;
 }
+
+/* ==================================================
+   JOB CONTAINER & BOX
+================================================== */
 
 .job-container {
     display: flex;
@@ -181,55 +306,87 @@ footer {
     flex: 0 1 350px;
     max-width: 350px;
     min-height: 180px;
-    background: #f8fff8;
+    background: rgba(248, 255, 248, 0.85);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
     border-left: 5px solid #43B143;
-    border-radius: 12px;
+    border-radius: 14px;
     padding: 30px;
-    box-shadow: 0 5px 20px rgba(0,0,0,.08);
-    transition: .3s ease;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .job-box:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(67,177,67,.18);
+    transform: translateY(-6px);
+    box-shadow: 0 15px 40px rgba(67, 177, 67, 0.15);
+    background: rgba(255, 255, 255, 0.95);
 }
 
 .job-box h3 {
-    color: #2f8f2f;
+    color: #1a4a1a;
     margin-bottom: 15px;
+    font-size: 20px;
+    font-weight: 700;
 }
 
 .job-box ul {
     list-style: disc;
     padding-left: 20px;
-    color: #555;
+    color: #2a3a2a;
 }
 
 .job-box ul li {
-    margin-bottom: 5px;
+    margin-bottom: 8px;
+    line-height: 1.6;
 }
+
+/* ==================================================
+   APPLICATION HEADER
+================================================== */
 
 .application-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 30px;
+    flex-wrap: wrap;
+    gap: 15px;
 }
 
 .application-header h2 {
     margin: 0;
 }
 
+/* APPLICATION HEADER WITH SPARKLE */
+.application-header h2::before {
+    content: '✦';
+    color: #43B143;
+    margin-right: 12px;
+    font-size: 32px;
+    display: inline-block;
+    animation: sparkle 2s ease-in-out infinite;
+}
+
+/* FIX: Allow pointer cursor on application image */
 .application-title-img {
     width: 180px;
     height: auto;
     cursor: pointer;
-    transition: 0.3s ease;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    border-radius: 8px;
+    padding: 5px;
+    background: rgba(255, 255, 255, 0.5);
+    pointer-events: auto !important;
 }
 
 .application-title-img:hover {
-    transform: scale(1.05);
+    transform: scale(1.05) rotate(-1deg);
+    box-shadow: 0 8px 25px rgba(67, 177, 67, 0.2);
 }
+
+/* ==================================================
+   JOB HEADER
+================================================== */
 
 .job-header {
     display: flex;
@@ -237,33 +394,69 @@ footer {
     justify-content: space-between;
     gap: 20px;
     margin-bottom: 35px;
+    flex-wrap: wrap;
 }
 
 .job-header h2 {
     margin: 0;
 }
 
+/* JOB HEADER WITH SPARKLE */
+.job-header h2::before {
+    content: '✦';
+    color: #43B143;
+    margin-right: 12px;
+    font-size: 32px;
+    display: inline-block;
+    animation: sparkle 2s ease-in-out infinite;
+}
+
+/* ==================================================
+   BUTTONS - MODERN
+================================================== */
+
 .apply-btn {
     margin-left: auto;
     padding: 14px 34px;
     border: none;
-    border-radius: 10px;
+    border-radius: 12px;
     background: linear-gradient(135deg, #43B143, #2f8f2f);
     color: #fff;
     font-size: 15px;
     font-weight: 600;
     cursor: pointer;
-    transition: .3s;
-    box-shadow: 0 10px 25px rgba(67,177,67,.20);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 8px 25px rgba(67, 177, 67, 0.2);
+    letter-spacing: 0.5px;
 }
 
 .apply-btn:hover {
     transform: translateY(-3px);
-    box-shadow: 0 18px 35px rgba(67,177,67,.35);
+    box-shadow: 0 18px 40px rgba(67, 177, 67, 0.35);
+    background: linear-gradient(135deg, #4fc14f, #2f8f2f);
+}
+
+.apply-btn:active {
+    transform: translateY(-1px);
+}
+
+/* ==================================================
+   FOOTER - MODERN
+================================================== */
+
+footer {
+    background: linear-gradient(135deg, #1a4a1a, #2f8f2f);
+    color: rgba(255, 255, 255, 0.9);
+    text-align: center;
+    padding: 25px 20px;
+    margin-top: 50px;
+    font-size: 15px;
+    letter-spacing: 0.5px;
+    border-top: 3px solid rgba(255, 255, 255, 0.1);
 }
 
 /* ==========================================
-   MODAL STYLES
+   MODAL STYLES - ENHANCED
 ========================================== */
 
 .modal-overlay {
@@ -273,7 +466,9 @@ footer {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.6);
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
     z-index: 999999;
     justify-content: center;
     align-items: center;
@@ -288,23 +483,24 @@ footer {
     width: 100%;
     max-width: 760px;
     max-height: 90vh;
-    animation: slideIn 0.3s ease;
+    animation: slideIn 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-content {
     background: #ffffff;
-    border-radius: 20px;
+    border-radius: 24px;
     overflow: hidden;
-    box-shadow: 0 25px 70px rgba(0,0,0,0.4);
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.4);
     display: flex;
     flex-direction: column;
     max-height: 90vh;
+    border: 2px solid rgba(67, 177, 67, 0.2);
 }
 
 .modal-header {
     background: linear-gradient(135deg, #43B143, #69C669);
     color: #fff;
-    padding: 20px 30px;
+    padding: 22px 30px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -315,32 +511,35 @@ footer {
     margin: 0;
     font-size: 28px;
     color: #fff;
+    font-weight: 700;
 }
 
 .modal-close {
-    width: 40px;
-    height: 40px;
+    width: 42px;
+    height: 42px;
     border: none;
     border-radius: 50%;
-    background: #fff;
-    color: #2f8f2f;
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
     font-size: 28px;
     cursor: pointer;
-    transition: 0.3s;
+    transition: all 0.3s ease;
     display: flex;
     align-items: center;
     justify-content: center;
     line-height: 1;
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
 }
 
 .modal-close:hover {
     background: #2f8f2f;
     color: #fff;
-    transform: rotate(90deg);
+    transform: rotate(90deg) scale(1.05);
 }
 
 .modal-body {
-    padding: 30px;
+    padding: 35px;
     overflow-y: auto;
     flex: 1;
 }
@@ -351,17 +550,18 @@ footer {
 
 .modal-body::-webkit-scrollbar-track {
     background: #f0f0f0;
+    border-radius: 10px;
 }
 
 .modal-body::-webkit-scrollbar-thumb {
-    background: #43B143;
+    background: linear-gradient(135deg, #43B143, #79C679);
     border-radius: 10px;
 }
 
 @keyframes slideIn {
     from {
         opacity: 0;
-        transform: translateY(30px) scale(0.95);
+        transform: translateY(40px) scale(0.95);
     }
     to {
         opacity: 1;
@@ -369,29 +569,33 @@ footer {
     }
 }
 
-/* FORM STYLES */
+/* ==================================================
+   FORM STYLES - MODERN
+================================================== */
+
 .form-group {
-    margin-bottom: 20px;
+    margin-bottom: 22px;
 }
 
 .form-group label {
     display: block;
     font-weight: 600;
-    color: #2f8f2f;
-    margin-bottom: 6px;
+    color: #1a4a1a;
+    margin-bottom: 8px;
     font-size: 14px;
+    letter-spacing: 0.3px;
 }
 
 .form-group input,
 .form-group select,
 .form-group textarea {
     width: 100%;
-    padding: 12px 15px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
+    padding: 12px 16px;
+    border: 2px solid #e8ece8;
+    border-radius: 10px;
     font-size: 15px;
     font-family: inherit;
-    transition: 0.3s;
+    transition: all 0.3s ease;
     background: #fafafa;
 }
 
@@ -400,8 +604,9 @@ footer {
 .form-group textarea:focus {
     border-color: #43B143;
     outline: none;
-    box-shadow: 0 0 0 3px rgba(67, 177, 67, 0.15);
+    box-shadow: 0 0 0 4px rgba(67, 177, 67, 0.1);
     background: #fff;
+    transform: translateY(-1px);
 }
 
 .form-group textarea {
@@ -417,22 +622,25 @@ footer {
 
 .form-group input[type="file"] {
     padding: 10px;
-    background: #fff;
+    background: #fafafa;
+    border: 2px dashed #43B143;
+    cursor: pointer;
 }
 
 .form-group input[type="file"]::file-selector-button {
-    padding: 8px 16px;
+    padding: 8px 20px;
     border: none;
-    border-radius: 6px;
-    background: #43B143;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #43B143, #2f8f2f);
     color: #fff;
     cursor: pointer;
     margin-right: 15px;
-    transition: 0.3s;
+    transition: all 0.3s ease;
 }
 
 .form-group input[type="file"]::file-selector-button:hover {
-    background: #2f8f2f;
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(67, 177, 67, 0.3);
 }
 
 .upload-note {
@@ -445,7 +653,7 @@ footer {
 .form-actions {
     margin-top: 30px;
     padding-top: 20px;
-    border-top: 1px solid #eee;
+    border-top: 2px solid #eee;
     display: flex;
     justify-content: flex-end;
 }
@@ -453,35 +661,43 @@ footer {
 .submit-btn {
     padding: 14px 40px;
     border: none;
-    border-radius: 10px;
+    border-radius: 12px;
     background: linear-gradient(135deg, #43B143, #2f8f2f);
     color: #fff;
     font-size: 16px;
     font-weight: 600;
     cursor: pointer;
-    transition: 0.3s;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 8px 25px rgba(67, 177, 67, 0.2);
+    letter-spacing: 0.5px;
 }
 
 .submit-btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 10px 25px rgba(67, 177, 67, 0.3);
+    transform: translateY(-3px);
+    box-shadow: 0 15px 35px rgba(67, 177, 67, 0.35);
+    background: linear-gradient(135deg, #4fc14f, #2f8f2f);
 }
 
 .submit-btn:disabled {
-    opacity: 0.7;
+    opacity: 0.6;
     cursor: not-allowed;
+    transform: none !important;
 }
 
-/* SMALL MODALS */
+/* ==================================================
+   SMALL MODALS
+================================================== */
+
 .modal-small {
     background: #ffffff;
-    border-radius: 18px;
+    border-radius: 20px;
     padding: 40px;
     max-width: 420px;
     width: 90%;
     text-align: center;
-    animation: slideIn 0.3s ease;
-    box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+    animation: slideIn 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.3);
+    border: 3px solid #28a745;
 }
 
 .modal-small.success {
@@ -510,40 +726,48 @@ footer {
 }
 
 .modal-small h2 {
-    color: #2f8f2f;
+    color: #1a4a1a;
     margin-bottom: 15px;
+    font-weight: 700;
 }
 
 .modal-small p {
-    color: #555;
+    color: #2a3a2a;
     margin-bottom: 25px;
-    line-height: 1.6;
+    line-height: 1.7;
 }
 
 .modal-btn {
     padding: 12px 40px;
     border: none;
     border-radius: 10px;
-    background: #43B143;
+    background: linear-gradient(135deg, #43B143, #2f8f2f);
     color: #fff;
     font-size: 15px;
+    font-weight: 600;
     cursor: pointer;
-    transition: 0.3s;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(67, 177, 67, 0.2);
 }
 
 .modal-btn:hover {
-    background: #2f8f2f;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(67, 177, 67, 0.3);
 }
 
 .modal-btn.success-btn {
-    background: #28a745;
+    background: linear-gradient(135deg, #28a745, #1e7e34);
 }
 
 .modal-btn.success-btn:hover {
-    background: #218838;
+    background: linear-gradient(135deg, #34ce57, #28a745);
+    box-shadow: 0 8px 25px rgba(40, 167, 69, 0.3);
 }
 
-/* RESPONSIVE */
+/* ==================================================
+   RESPONSIVE
+================================================== */
+
 @media (max-width: 768px) {
     header {
         flex-direction: column;
@@ -557,26 +781,47 @@ footer {
         justify-content: center;
         gap: 15px;
     }
+    
+    nav a {
+        font-size: 13px;
+    }
 
     .section {
         margin: 15px;
-        padding: 20px;
+        padding: 25px;
+    }
+    
+    .section h2 {
+        font-size: 28px;
+    }
+    
+    .section h2::before {
+        font-size: 26px;
     }
 
     .job-header {
         flex-direction: column;
         align-items: flex-start;
     }
+    
+    .job-header h2::before {
+        font-size: 26px;
+    }
 
     .apply-btn {
         width: 100%;
         margin-left: 0;
+        text-align: center;
     }
 
     .application-header {
         flex-direction: column;
         gap: 15px;
         text-align: center;
+    }
+    
+    .application-header h2::before {
+        font-size: 26px;
     }
 
     .application-title-img {
@@ -607,6 +852,7 @@ footer {
 
     .form-row {
         grid-template-columns: 1fr;
+        gap: 0;
     }
 
     .form-actions {
@@ -632,13 +878,57 @@ footer {
     .modal-small {
         padding: 30px 20px;
     }
+    
+    .info-box {
+        padding: 20px 25px;
+    }
+}
+
+@media (max-width: 480px) {
+    .section {
+        padding: 20px;
+    }
+    
+    .section h2 {
+        font-size: 24px;
+    }
+    
+    .section h2::before {
+        font-size: 22px;
+    }
+    
+    .application-header h2::before {
+        font-size: 22px;
+    }
+    
+    .job-header h2::before {
+        font-size: 22px;
+    }
+    
+    .application-title-img {
+        width: 120px;
+    }
+    
+    .job-box {
+        padding: 20px;
+    }
 }
 
 /* ============================================
    SILENT PROTECTION - FULL PROTECTION
    ============================================ */
 
-/* Prevent ALL selection - This is the key fix! */
+/* Allow pointer events on clickable elements */
+[onclick] {
+    cursor: pointer !important;
+}
+
+.application-title-img {
+    pointer-events: auto !important;
+    cursor: pointer !important;
+}
+
+/* Prevent ALL selection */
 * {
     -webkit-user-select: none !important;
     -moz-user-select: none !important;
@@ -648,7 +938,7 @@ footer {
     -webkit-tap-highlight-color: transparent !important;
 }
 
-/* Prevent image selection and dragging */
+/* Prevent image selection and dragging - but keep pointer events for clickable images */
 img {
     -webkit-user-drag: none !important;
     -user-drag: none !important;
@@ -656,6 +946,10 @@ img {
     user-select: none !important;
     -moz-user-select: none !important;
     -ms-user-select: none !important;
+}
+
+/* Only block pointer events on non-interactive images */
+img:not(.application-title-img):not([onclick]) {
     pointer-events: none !important;
 }
 
@@ -674,6 +968,12 @@ p, h1, h2, h3, h4, h5, h6, span, div, label, button, a, li, ul, ol {
     -ms-user-select: none !important;
     user-select: none !important;
     cursor: default !important;
+}
+
+/* But allow pointer cursor on interactive elements */
+button, .apply-btn, .submit-btn, .modal-btn, .modal-close, .success-close, 
+.application-title-img, .iso-title-img, [onclick] {
+    cursor: pointer !important;
 }
 
 /* Make selection completely invisible */
@@ -718,12 +1018,4 @@ p, h1, h2, h3, h4, h5, h6, span, div, label, button, a, li, ul, ol {
 /* Remove any warning message styling */
 .screenshot-warning {
     display: none !important;
-}
-
-/* Prevent text highlighting on hover */
-* {
-    -webkit-user-select: none !important;
-    -moz-user-select: none !important;
-    -ms-user-select: none !important;
-    user-select: none !important;
 }

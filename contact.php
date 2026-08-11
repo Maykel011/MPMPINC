@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us - MPMPI</title>
-    <link rel="stylesheet" href="css/contacts.css">
+    <link rel="stylesheet" href="css/contact.css">
     <script src="javascript/contact.js" defer></script>
 </head>
 <body>

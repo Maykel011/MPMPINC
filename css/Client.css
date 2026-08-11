@@ -13,32 +13,46 @@ html {
 }
 
 /* ==================================================
-   BODY
+   BODY - MODERN & DYNAMIC
 ================================================== */
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Segoe UI', Arial, Helvetica, sans-serif;
     background: #f5f5f5;
-    color: #333;
-    line-height: 1.6;
+    color: #1a2a1a;
+    line-height: 1.7;
     padding-top: 145px;
     overflow-x: hidden;
     position: relative;
+    min-height: 100vh;
 }
 
+/* ORIGINAL BACKGROUND IMAGE - RESTORED */
 body::before {
     content: "";
     position: fixed;
     inset: 0;
     background: url("../images/salustania.png") center center no-repeat;
     background-size: cover;
-    opacity: .5;
+    opacity: 0.5;
+    z-index: -1;
+    pointer-events: none;
+}
+
+/* ADDITIONAL OVERLAY FOR DEPTH */
+body::after {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background: 
+        radial-gradient(circle at 20% 50%, rgba(67, 177, 67, 0.03) 0%, transparent 50%),
+        radial-gradient(circle at 80% 50%, rgba(67, 177, 67, 0.03) 0%, transparent 50%);
     z-index: -1;
     pointer-events: none;
 }
 
 /* ==================================================
-   HEADER
+   HEADER - GLASS MORPHISM
 ================================================== */
 
 header {
@@ -47,27 +61,42 @@ header {
     left: 0;
     width: 100%;
     height: 90px;
-    background: linear-gradient(to bottom, #79C679, #43B143);
+    background: rgba(67, 177, 67, 0.92);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 50px;
-    box-shadow: 0 2px 15px rgba(0, 0, 0, .15);
+    box-shadow: 0 4px 30px rgba(67, 177, 67, 0.25);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
     z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+header:hover {
+    background: rgba(67, 177, 67, 0.96);
+    box-shadow: 0 4px 40px rgba(67, 177, 67, 0.35);
 }
 
 .logo img {
     height: 70px;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+    transition: transform 0.3s ease;
+}
+
+.logo img:hover {
+    transform: scale(1.05);
 }
 
 /* ==================================================
-   NAVIGATION
+   NAVIGATION - ENHANCED
 ================================================== */
 
 nav {
     display: flex;
     align-items: center;
-    gap: 25px;
+    gap: 30px;
 }
 
 nav a {
@@ -76,6 +105,9 @@ nav a {
     font-size: 15px;
     font-weight: 600;
     position: relative;
+    padding: 5px 0;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
 }
 
 nav a::after {
@@ -84,9 +116,10 @@ nav a::after {
     left: 0;
     bottom: -3px;
     width: 0;
-    height: 2px;
-    background: #fff;
-    transition: .3s;
+    height: 3px;
+    background: linear-gradient(to right, #ffffff, #c8e6c9);
+    border-radius: 2px;
+    transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 nav a:hover::after,
@@ -94,8 +127,13 @@ nav a.active::after {
     width: 100%;
 }
 
+nav a:hover {
+    transform: translateY(-2px);
+    text-shadow: 0 2px 10px rgba(255, 255, 255, 0.3);
+}
+
 /* ==================================================
-   CATEGORY BAR
+   CATEGORY BAR - MODERN
 ================================================== */
 
 .category-bar {
@@ -104,9 +142,11 @@ nav a.active::after {
     left: 0;
     width: 100%;
     height: 55px;
-    background: #fff;
-    border-bottom: 1px solid #e5e5e5;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, .08);
+    background: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(67, 177, 67, 0.1);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
     z-index: 999;
 }
 
@@ -117,7 +157,7 @@ nav a.active::after {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 20px;
+    gap: 25px;
 }
 
 .category-container a {
@@ -125,36 +165,52 @@ nav a.active::after {
     color: #2f8f2f;
     font-weight: 600;
     font-size: 15px;
-    padding: 10px 20px;
+    padding: 10px 24px;
     border-radius: 30px;
-    transition: .3s;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
 }
 
 .category-container a:hover {
-    background: #43B143;
+    background: linear-gradient(135deg, #43B143, #2f8f2f);
     color: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(67, 177, 67, 0.3);
 }
 
 /* ==================================================
-   SECTION
+   SECTION - ELEVATED CARDS
 ================================================== */
 
 .section {
     max-width: 1200px;
     margin: 25px auto;
     padding: 50px;
-    background: #fff;
-    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 24px;
     border-top: 6px solid #43B143;
-    box-shadow: 0 5px 25px rgba(0, 0, 0, .08);
+    box-shadow: 
+        0 10px 40px rgba(0, 0, 0, 0.06),
+        0 2px 10px rgba(67, 177, 67, 0.08),
+        inset 0 1px 0 rgba(255, 255, 255, 0.6);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
 }
 
+
+
+
 .section h2 {
-    font-size: 34px;
-    color: #2f8f2f;
+    font-size: 38px;
+    color: #1a4a1a;
     margin-bottom: 25px;
     position: relative;
-    padding-bottom: 15px;
+    padding-bottom: 18px;
+    font-weight: 800;
+    letter-spacing: -0.5px;
 }
 
 .section h2::after {
@@ -162,38 +218,63 @@ nav a.active::after {
     position: absolute;
     left: 0;
     bottom: 0;
-    width: 80px;
-    height: 4px;
-    background: linear-gradient(to right, #43B143, #79C679);
+    width: 90px;
+    height: 5px;
+    background: linear-gradient(to right, #43B143, #79C679, #a8d5a8);
+    border-radius: 3px;
+}
+
+.section h2::before {
+    content: '✦';
+    color: #43B143;
+    margin-right: 12px;
+    font-size: 32px;
+    display: inline-block;
+    animation: sparkle 2s ease-in-out infinite;
+}
+
+@keyframes sparkle {
+    0%, 100% { opacity: 1; transform: scale(1) rotate(0deg); }
+    50% { opacity: 0.5; transform: scale(1.2) rotate(180deg); }
 }
 
 .section p {
     font-size: 17px;
-    color: #222;
-    line-height: 1.9;
-    text-align: justify;
+    color: #1e2a1e;
+    line-height: 2;
+    text-align: left;
+}
+
+.section p b {
+    color: #2f8f2f;
+    font-weight: 700;
 }
 
 /* ==================================================
-   CLIENT CATEGORY
+   CLIENT CATEGORY - ENHANCED
 ================================================== */
 
 .client-category {
     margin-top: 50px;
-    padding: 35px;
-    background: #fff;
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
     border-left: 6px solid #43B143;
     border-radius: 18px;
-    box-shadow: 0 5px 25px rgba(0, 0, 0, .08);
+    box-shadow: 
+        0 8px 30px rgba(0, 0, 0, 0.06),
+        0 2px 10px rgba(67, 177, 67, 0.06);
     position: relative;
     overflow: hidden;
     scroll-margin-top: 170px;
-    transition: .3s ease;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .client-category:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 12px 30px rgba(67, 177, 67, .15);
+    transform: translateY(-6px);
+    box-shadow: 0 20px 50px rgba(67, 177, 67, 0.12);
+    background: rgba(255, 255, 255, 0.92);
 }
 
 .client-category::before {
@@ -205,34 +286,41 @@ nav a.active::after {
     height: 180px;
     border-radius: 50%;
     background: radial-gradient(circle,
-            rgba(67, 177, 67, .10),
+            rgba(67, 177, 67, 0.08),
             transparent 70%);
 }
 
 /* ==================================================
-   CATEGORY TITLE
+   CATEGORY TITLE - ENHANCED
 ================================================== */
 
 .client-category h3 {
     display: inline-flex;
     align-items: center;
-    gap: 10px;
+    gap: 12px;
     margin-bottom: 30px;
-    padding: 10px 18px;
-    background: #f8fff8;
+    padding: 12px 22px;
+    background: linear-gradient(135deg, #f8fff8, #e8f5e9);
     border-left: 5px solid #43B143;
-    border-radius: 10px;
-    font-size: 22px;
-    color: #2f8f2f;
+    border-radius: 12px;
+    font-size: 24px;
+    color: #1a4a1a;
     font-weight: 700;
+    box-shadow: 0 2px 10px rgba(67, 177, 67, 0.08);
 }
 
 .client-category h3::before {
     content: "";
-    width: 12px;
-    height: 12px;
-    background: #43B143;
+    width: 14px;
+    height: 14px;
+    background: linear-gradient(135deg, #43B143, #79C679);
     border-radius: 50%;
+    animation: pulse-dot 2s ease-in-out infinite;
+}
+
+@keyframes pulse-dot {
+    0%, 100% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.3); opacity: 0.7; }
 }
 
 /* ==================================================
@@ -246,7 +334,7 @@ nav a.active::after {
 }
 
 /* ==================================================
-   CLIENT CARD
+   CLIENT CARD - ENHANCED
 ================================================== */
 
 .client-card {
@@ -256,14 +344,13 @@ nav a.active::after {
     justify-content: center;
     align-items: center;
     padding: 15px;
-    background: #fff;
+    background: rgba(255, 255, 255, 0.9);
     border: 2px solid #43B143;
     border-radius: 18px;
     overflow: hidden;
     cursor: pointer;
-    transition: .35s ease;
-    box-shadow: 0 8px 18px rgba(0, 0, 0, .08),
-                inset 0 0 18px rgba(0, 0, 0, .04);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
 }
 
 .client-card::before {
@@ -275,9 +362,10 @@ nav a.active::after {
     background: linear-gradient(180deg,
             #efefef 0%,
             #e3e3e3 100%);
-    box-shadow: inset 0 6px 12px rgba(0, 0, 0, .12),
-                inset 0 -4px 8px rgba(255, 255, 255, .35);
+    box-shadow: inset 0 6px 12px rgba(0, 0, 0, 0.10),
+                inset 0 -4px 8px rgba(255, 255, 255, 0.35);
     pointer-events: none;
+    transition: all 0.3s ease;
 }
 
 .client-card::after {
@@ -289,23 +377,29 @@ nav a.active::after {
     height: 100%;
     background: linear-gradient(120deg,
             transparent,
-            rgba(255, 255, 255, .7),
+            rgba(255, 255, 255, 0.6),
             transparent);
-    transition: .8s;
+    transition: 0.8s;
 }
 
 .client-card:hover {
-    transform: translateY(-8px);
+    transform: translateY(-10px) scale(1.02);
     border-color: #2f8f2f;
-    box-shadow: 0 18px 35px rgba(67, 177, 67, .25);
+    box-shadow: 0 20px 45px rgba(67, 177, 67, 0.25);
 }
 
 .client-card:hover::after {
     left: 140%;
 }
 
+.client-card:hover::before {
+    background: linear-gradient(180deg,
+            #e8f5e9 0%,
+            #c8e6c9 100%);
+}
+
 /* ==================================================
-   CLIENT LOGO
+   CLIENT LOGO - ENHANCED
 ================================================== */
 
 .client-card img {
@@ -318,19 +412,13 @@ nav a.active::after {
     max-width: 92%;
     max-height: 92%;
     object-fit: contain;
-    filter: drop-shadow(0 2px 6px rgba(0, 0, 0, .18));
-    transition: transform .35s ease;
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.15));
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .client-card:hover img {
-    transform: scale(1.08);
-}
-
-.client-card:hover {
-    transform: translateY(-8px);
-    border-color: #2f8f2f;
-    box-shadow: 0 18px 35px rgba(67, 177, 67, .25),
-                inset 0 0 25px rgba(67, 177, 67, .08);
+    transform: scale(1.10);
+    filter: drop-shadow(0 6px 15px rgba(67, 177, 67, 0.2));
 }
 
 /* Move Ecoplaza logo slightly downward */
@@ -339,11 +427,11 @@ nav a.active::after {
 }
 
 .client-card:hover .ecoplaza-logo {
-    transform: translateY(6px) scale(1.08);
+    transform: translateY(6px) scale(1.10);
 }
 
 /* ==========================================
-   LARGE LOGOS
+   LARGE LOGOS - ENHANCED
 ========================================== */
 
 .eton-logo {
@@ -371,46 +459,56 @@ nav a.active::after {
 }
 
 .client-card:hover .eton-logo {
-    transform: scale(1.26);
-}
-
-.client-card:hover .peninsula-logo {
-    transform: scale(1.26);
-}
-
-.client-card:hover .streetscape-logo {
-    transform: scale(1.26);
-}
-
-.client-card:hover .jnhsm-logo {
     transform: scale(1.28);
 }
 
+.client-card:hover .peninsula-logo {
+    transform: scale(1.28);
+}
+
+.client-card:hover .streetscape-logo {
+    transform: scale(1.28);
+}
+
+.client-card:hover .jnhsm-logo {
+    transform: scale(1.30);
+}
+
 /* ==================================================
-   FOOTER
+   FOOTER - MODERN
 ================================================== */
 
 footer {
-    background: #2f8f2f;
-    color: #fff;
+    background: linear-gradient(135deg, #1a4a1a, #2f8f2f);
+    color: rgba(255, 255, 255, 0.9);
     text-align: center;
-    padding: 20px;
+    padding: 25px 20px;
     margin-top: 50px;
     font-size: 15px;
+    letter-spacing: 0.5px;
+    border-top: 3px solid rgba(255, 255, 255, 0.1);
 }
 
 /* ============================================
    SILENT PROTECTION - NO VISIBLE INDICATORS
    ============================================ */
 
-/* Prevent image selection and dragging - SILENT */
+/* Allow pointer events on clickable elements */
+[onclick] {
+    cursor: pointer !important;
+}
+
+/* Prevent image selection and dragging - but keep pointer events for clickable images */
 img {
     -webkit-user-drag: none !important;
-    user-drag: none !important;
     -webkit-user-select: none !important;
     user-select: none !important;
     -moz-user-select: none !important;
     -ms-user-select: none !important;
+}
+
+/* Only block pointer events on non-interactive images */
+img:not([onclick]) {
     pointer-events: none !important;
 }
 
@@ -531,9 +629,18 @@ p, h1, h2, h3, h4, h5, h6, span, div, label, button, a {
         margin: 25px 20px;
         padding: 35px;
     }
+    
+    .section h2 {
+        font-size: 32px;
+    }
 
     .client-category {
         scroll-margin-top: 220px;
+        padding: 30px;
+    }
+    
+    .client-category h3 {
+        font-size: 21px;
     }
 
     .client-grid {
@@ -582,6 +689,10 @@ p, h1, h2, h3, h4, h5, h6, span, div, label, button, a {
         font-size: 28px;
     }
 
+    .section h2::before {
+        font-size: 26px;
+    }
+
     .client-category {
         padding: 25px;
         scroll-margin-top: 235px;
@@ -589,6 +700,7 @@ p, h1, h2, h3, h4, h5, h6, span, div, label, button, a {
 
     .client-category h3 {
         font-size: 20px;
+        padding: 10px 18px;
     }
 
     .client-grid {
@@ -634,9 +746,18 @@ p, h1, h2, h3, h4, h5, h6, span, div, label, button, a {
     .section {
         padding: 20px;
     }
+    
+    .section h2 {
+        font-size: 24px;
+    }
+
+    .section h2::before {
+        font-size: 22px;
+    }
 
     .client-grid {
         grid-template-columns: 1fr;
+        gap: 15px;
     }
 
     .client-card {
@@ -646,5 +767,9 @@ p, h1, h2, h3, h4, h5, h6, span, div, label, button, a {
     .client-card img {
         max-width: 75%;
         max-height: 75%;
+    }
+    
+    .client-category h3 {
+        font-size: 18px;
     }
 }
