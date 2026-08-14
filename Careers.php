@@ -15,7 +15,7 @@ if (isset($_SESSION['application_success']) && $_SESSION['application_success'])
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Careers - MPMPI</title>
-    <link rel="stylesheet" href="css/careers.css">
+    <link rel="stylesheet" href="css/careers2.css">
     <script src="javascript/careers.js" defer></script>
 </head>
 <body>
@@ -64,7 +64,7 @@ if (isset($_SESSION['application_success']) && $_SESSION['application_success'])
         <div class="info-box">
             <h3>Walk-In</h3>
             <p>
-                4/F Salustiana D. Ty Tower <br>
+                4/F Salustiana D. Ty Tower 
                 104 Paseo De Roxas corner Perea St.
                 Legaspi Village, Makati City <br>
             </p>
@@ -73,13 +73,7 @@ if (isset($_SESSION['application_success']) && $_SESSION['application_success'])
             <h3>Email</h3>
             <p>humanresource@metro-parking.com.ph</p>
         </div>
-        <div class="info-box">
-            <h3>Telephone</h3>
-            <p>
-                (02) 82463400 <br>
-                Loc. 101, 107 &amp; 118
-            </p>
-        </div>
+  
     </div>
 </section>
 

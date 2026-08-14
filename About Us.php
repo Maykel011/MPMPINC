@@ -83,7 +83,7 @@
                 <strong>dedicated</strong> to increasing employees'
                 and shareholders' value.
             </p>
-        </article>    
+        </article>
 
         <article class="info-box">
             <h3>Vision</h3>

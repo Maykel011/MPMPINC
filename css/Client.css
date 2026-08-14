@@ -21,7 +21,7 @@ body {
     background: #f5f5f5;
     color: #1a2a1a;
     line-height: 1.7;
-    padding-top: 145px;
+    padding-top: 100px;
     overflow-x: hidden;
     position: relative;
     min-height: 100vh;
@@ -179,7 +179,7 @@ nav a:hover {
 }
 
 /* ==================================================
-   SECTION - ELEVATED CARDS
+   SECTION - SOLID GREEN BORDER - NO MOVEMENT
 ================================================== */
 
 .section {
@@ -191,17 +191,12 @@ nav a:hover {
     -webkit-backdrop-filter: blur(10px);
     border-radius: 24px;
     border-top: 6px solid #43B143;
-    box-shadow: 
-        0 10px 40px rgba(0, 0, 0, 0.06),
-        0 2px 10px rgba(67, 177, 67, 0.08),
-        inset 0 1px 0 rgba(255, 255, 255, 0.6);
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: none;
     position: relative;
     overflow: hidden;
 }
 
-
-
+/* NO .section:hover - COMPLETELY REMOVED */
 
 .section h2 {
     font-size: 38px;
@@ -592,7 +587,7 @@ p, h1, h2, h3, h4, h5, h6, span, div, label, button, a {
 
 @media (max-width: 992px) {
     body {
-        padding-top: 185px;
+        padding-top: 100px;
     }
 
     header {
@@ -600,7 +595,7 @@ p, h1, h2, h3, h4, h5, h6, span, div, label, button, a {
         justify-content: center;
         height: auto;
         padding: 15px 20px;
-        gap: 12px;
+        gap: 10px;
     }
 
     .logo img {
@@ -610,7 +605,7 @@ p, h1, h2, h3, h4, h5, h6, span, div, label, button, a {
     nav {
         flex-wrap: wrap;
         justify-content: center;
-        gap: 18px;
+        gap: 15px;
     }
 
     .category-bar {
@@ -659,15 +654,25 @@ p, h1, h2, h3, h4, h5, h6, span, div, label, button, a {
 
 @media (max-width: 768px) {
     body {
-        padding-top: 205px;
+        padding-top: 150px;
+    }
+
+    header {
+        flex-direction: column;
+        gap: 8px;
+        padding: 12px 20px;
+        height: auto;
+        min-height: 90px;
     }
 
     nav {
         gap: 12px;
+        flex-wrap: wrap;
+        justify-content: center;
     }
 
     nav a {
-        font-size: 14px;
+        font-size: 13px;
     }
 
     .category-container {
@@ -683,6 +688,7 @@ p, h1, h2, h3, h4, h5, h6, span, div, label, button, a {
     .section {
         margin: 20px 15px;
         padding: 25px;
+        border-top: 6px solid #43B143;
     }
 
     .section h2 {
@@ -719,7 +725,7 @@ p, h1, h2, h3, h4, h5, h6, span, div, label, button, a {
 
 @media (max-width: 480px) {
     body {
-        padding-top: 225px;
+        padding-top: 150px;
     }
 
     .logo img {
@@ -727,11 +733,11 @@ p, h1, h2, h3, h4, h5, h6, span, div, label, button, a {
     }
 
     nav {
-        gap: 10px;
+        gap: 8px;
     }
 
     nav a {
-        font-size: 13px;
+        font-size: 12px;
     }
 
     .category-container {
@@ -745,6 +751,7 @@ p, h1, h2, h3, h4, h5, h6, span, div, label, button, a {
 
     .section {
         padding: 20px;
+        border-top: 6px solid #43B143;
     }
     
     .section h2 {

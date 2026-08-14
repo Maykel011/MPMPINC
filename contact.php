@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us - MPMPI</title>
-    <link rel="stylesheet" href="css/contact.css">
+
+    <link rel="stylesheet" href="css/contacts.css">
     <script src="javascript/contact.js" defer></script>
 </head>
 <body>
 
-
+<!-- HEADER -->
 <header> 
     <div class="logo">
         <img src="images/mpmpi.png" alt="MPMPI Logo">
@@ -24,7 +25,7 @@
     </nav>
 </header>
 
-
+<!-- CONTACT -->
 <section class="section">
 
     <h2>Contact Us</h2>

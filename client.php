@@ -9,7 +9,7 @@
 </head>
 <body>
 
-
+<!-- HEADER -->
 <header>
     <div class="logo">
         <img src="images/mpmpi.png" alt="MPMPI Logo">
@@ -24,7 +24,7 @@
     </nav>
 </header>
 
-
+<!-- INTRO -->
 <section class="section">
     <h2>Our Clients</h2>
     <p>
@@ -53,6 +53,13 @@
                 <div class="client-card">
                     <img src="images/clients/ecoplaza.png" class="ecoplaza-logo" alt="Ecoplaza">
                 </div>
+           		 <div 
+           			 class="client-card"><img src="images/clients/pbcom.png" alt="">
+           		 </div>
+            	<div 
+            		class="client-card"><img src="images/clients/robinsonland.png" alt="">
+            	</div>
+            
             </div>
         </div>
 
@@ -77,12 +84,10 @@
                 <div class="client-card"><img src="images/clients/cmci-logo.png" alt=""></div>
                 <div class="client-card"><img src="images/clients/seascape.png" alt=""></div>
                 <div class="client-card"><img src="images/clients/homedepot.png" alt=""></div>
-                <div class="client-card"><img src="images/clients/robinsonland.png" alt=""></div>
                 <div class="client-card"><img src="images/clients/southsupermarket.png" alt=""></div>
-                <div class="client-card"><img src="images/clients/federalland.png" alt=""></div>
                 <div class="client-card"><img src="images/clients/ictsi.png" alt=""></div>
                 <div class="client-card"><img src="images/clients/mbp.png" alt=""></div>
-                <div class="client-card"><img src="images/clients/pbcom.png" alt=""></div>
+                
             </div>
         </div>
 
