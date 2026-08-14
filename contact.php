@@ -130,7 +130,7 @@
 </section>
 
 <footer>
-    &copy; <?php echo date('2026'); ?> MPMPI. All Rights Reserved.
+    &copy; <?php echo date('y'); ?> MPMPI. All Rights Reserved.
 </footer>
 
 </body>

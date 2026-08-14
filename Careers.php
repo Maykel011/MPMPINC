@@ -243,7 +243,7 @@ if (isset($_SESSION['application_success']) && $_SESSION['application_success'])
 </div>
 
 <footer>
-    &copy; <?php echo date('2026'); ?> MPMPI. All Rights Reserved.
+    &copy; <?php echo date('y'); ?> MPMPI. All Rights Reserved.
 </footer>
 
 <script src="javascript/applied.js"></script>
